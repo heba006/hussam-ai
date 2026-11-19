@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hussam-Ai — اشتراكات تطبيقات الذكاء الاصطناعي</title>
+  <meta name="description" content="منصة Hussam-Ai لبيع اشتراكات تطبيقات الذكاء الاصطناعي الأصلية بأسعار منافسة، مع طلب سريع عبر واتساب." />
+  <meta name="theme-color" content="#2563EB" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hussam-Ai — اشتراكات تطبيقات الذكاء الاصطناعي" />
+  <meta property="og:description" content="اختر تطبيق الذكاء الاصطناعي الذي تحتاجه، أضفه إلى السلة، وأتمم اشتراكك عبر واتساب خلال دقائق." />
+  <meta property="og:locale" content="ar_AR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- ═══ مخزن الأيقونات ═══ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 1.67a8.24 8.24 0 0 1 8.24 8.24c0 4.55-3.7 8.24-8.24 8.24a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24Zm-3.6 3.92c-.2-.44-.4-.45-.6-.46h-.5c-.18 0-.46.06-.7.33-.24.27-.92.9-.92 2.2s.95 2.55 1.08 2.73c.13.18 1.86 2.97 4.58 4.05 2.26.9 2.72.72 3.21.68.5-.05 1.6-.65 1.82-1.28.22-.63.22-1.17.16-1.28-.07-.1-.24-.17-.5-.3-.27-.14-1.6-.79-1.84-.88-.24-.09-.42-.13-.6.14-.18.27-.7.88-.85 1.06-.15.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.15-.27-.01-.42.12-.55.12-.12.27-.31.4-.47.14-.15.18-.27.27-.45.09-.18.05-.33-.02-.47-.06-.13-.6-1.46-.83-2Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="2"/><rect x="17.5" y="13" width="4" height="6" rx="2"/><path d="M20 19a4 4 0 0 1-4 4h-2"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L20 8l-4-4L4 16v4Z"/><path d="m14.5 5.5 4 4"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 3 15a2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.4-2.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 10 4a2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.4l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.7 1.7 0 0 0 21 11a2 2 0 1 1 0 4Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H5.5A1.5 1.5 0 0 0 4 5.5v13A1.5 1.5 0 0 0 5.5 20H9"/><path d="M16 8l4 4-4 4M20 12H9"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4A3 3 0 0 0 7 7a3 3 0 0 0-1 5.8A3 3 0 0 0 9 18a3 3 0 0 0 3-3V6.5A2.5 2.5 0 0 0 9.5 4Z"/><path d="M14.5 4A3 3 0 0 1 17 7a3 3 0 0 1 1 5.8A3 3 0 0 1 15 18a3 3 0 0 1-3-3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="9.5" r="1.6"/><path d="m4 17 5-5 4 4 3-3 4 4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 4l-4 16"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M8 14h.01M16 14h.01M9 17h6"/><circle cx="12" cy="4" r="1"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24"><path d="m5 19 9-9M14 5l1.2 2.8L18 9l-2.8 1.2L14 13l-1.2-2.8L10 9l2.8-1.2L14 5ZM19 3v3M17.5 4.5h3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 5.5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18M16 14.5h2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.3 6.5 20.2l1.1-6.2L3 9.6l6.3-.9L12 3Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8 8"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7.5 8.5 12 4l4.5 4.5"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H8l-4 3v-4.5A8 8 0 0 1 13 4a8 8 0 0 1 8 8Z"/><path d="M9 11h.01M13 11h.01M17 11h.01"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10.5 13.5M21 3l-6.8 18-3.7-7.5L3 9.8 21 3Z"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5v-7Z"/><path d="m3 8.5 9 4.5 9-4.5M12 13v7"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.5 13.5 13 21a2 2 0 0 1-2.8 0L3.5 14.3a2 2 0 0 1-.6-1.4V4.9A1.9 1.9 0 0 1 4.8 3h8a2 2 0 0 1 1.4.6l6.3 6.3a2 2 0 0 1 0 2.8Z"/><circle cx="8" cy="8" r="1.6"/></symbol>
+  </svg>
+
+  <div class="announcement" role="status">
+    <div class="announcement-track" id="announcementText">تسليم فوري خلال دقائق • دعم مباشر عبر واتساب • أسعار قابلة للتحديث</div>
+  </div>
+
+  <!-- ═══ الترويسة ═══ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Hussam-Ai الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 3.5 19.7 12.3 28.5 16l-8.8 3.7L16 28.5l-3.7-8.8L3.5 16l8.8-3.7L16 3.5Z" fill="url(#bg1)"/>
+            <path d="M24.5 3.5 25.6 6.4 28.5 7.5 25.6 8.6 24.5 11.5 23.4 8.6 20.5 7.5 23.4 6.4 24.5 3.5Z" fill="url(#bg1)" opacity=".85"/>
+            <defs>
+              <linearGradient id="bg1" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2563EB"/><stop offset=".55" stop-color="#7C3AED"/><stop offset="1" stop-color="#EA580C"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong id="brandName">Hussam-Ai</strong>
+          <small>اشتراكات الذكاء الاصطناعي</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="#home">الرئيسية</a>
+        <a href="#apps">التطبيقات</a>
+        <a href="#offers">العروض</a>
+        <a href="#why">لماذا نحن</a>
+        <a href="#steps">كيف تطلب</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="تبديل المظهر">
+          <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        </button>
+
+        <button class="icon-btn admin-trigger" id="adminTrigger" type="button" aria-label="لوحة التحكم" title="لوحة التحكم">
+          <svg class="icon"><use href="#i-shield"/></svg>
+        </button>
+
+        <button class="cart-btn" id="cartTrigger" type="button" aria-label="سلة الاشتراكات">
+          <svg class="icon"><use href="#i-cart"/></svg>
+          <span class="cart-btn-label">السلة</span>
+          <span class="cart-badge" id="cartBadge" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ الواجهة الرئيسية ═══ -->
+    <section class="hero" id="home">
+      <div class="aurora" aria-hidden="true">
+        <span class="aurora-blob a1"></span>
+        <span class="aurora-blob a2"></span>
+        <span class="aurora-blob a3"></span>
+        <span class="aurora-grid"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="visitor-chip reveal">
+            <span class="live-dot" aria-hidden="true"></span>
+            <svg class="icon"><use href="#i-eye"/></svg>
+            <span>زائر حتى الآن</span>
+            <strong id="visitorCount">0</strong>
+          </div>
+
+          <h1 class="reveal" id="heroTitle">كل تطبيقات الذكاء الاصطناعي التي تحتاجها… في مكان واحد</h1>
+          <p class="hero-text reveal" id="heroText">
+            اختر التطبيق الذي يناسبك، أضفه إلى السلة، وأتمم اشتراكك عبر واتساب خلال دقائق.
+            أسعار منافسة، بدون وسطاء، ودعم بشري في كل خطوة.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary btn-lg" href="#apps">
+              <svg class="icon"><use href="#i-sparkles"/></svg>
+              تصفّح التطبيقات
+            </a>
+            <a class="btn btn-accent btn-lg" href="#" data-whatsapp-link target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-whatsapp"/></svg>
+              اطلب عبر واتساب
+            </a>
+          </div>
+
+          <ul class="trust-list reveal">
+            <li><svg class="icon"><use href="#i-bolt"/></svg> تسليم خلال دقائق</li>
+            <li><svg class="icon"><use href="#i-shield"/></svg> اشتراكات أصلية</li>
+            <li><svg class="icon"><use href="#i-headset"/></svg> دعم بشري مباشر</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="showcase">
+            <div class="showcase-head">
+              <span class="window-dots"><i></i><i></i><i></i></span>
+              <span class="showcase-name">Hussam-Ai Store</span>
+              <span class="live-tag"><i></i> مباشر</span>
+            </div>
+
+            <div class="showcase-list" id="showcaseList">
+              <div class="mini-app">
+                <span class="mini-icon" style="--c:#10A37F"><svg class="icon"><use href="#i-sparkles"/></svg></span>
+                <span class="mini-info"><strong>ChatGPT Plus</strong><small>اشتراك شهري</small></span>
+                <span class="mini-price">79 <small>ر.س</small></span>
+              </div>
+              <div class="mini-app">
+                <span class="mini-icon" style="--c:#D97757"><svg class="icon"><use href="#i-brain"/></svg></span>
+                <span class="mini-info"><strong>Claude Pro</strong><small>اشتراك شهري</small></span>
+                <span class="mini-price">89 <small>ر.س</small></span>
+              </div>
+              <div class="mini-app">
+                <span class="mini-icon" style="--c:#7C3AED"><svg class="icon"><use href="#i-image"/></svg></span>
+                <span class="mini-info"><strong>Midjourney</strong><small>اشتراك شهري</small></span>
+                <span class="mini-price">99 <small>ر.س</small></span>
+              </div>
+            </div>
+
+            <div class="showcase-foot">
+              <span class="sf-cart"><svg class="icon"><use href="#i-cart"/></svg> سلة الاشتراكات <b id="showcaseCartCount">2</b></span>
+              <span class="sf-total">الإجمالي <strong id="showcaseTotal">168 ر.س</strong></span>
+            </div>
+          </div>
+
+          <div class="float-badge fb-1"><svg class="icon"><use href="#i-bolt"/></svg> تسليم فوري</div>
+          <div class="float-badge fb-2"><svg class="icon"><use href="#i-whatsapp"/></svg> دعم واتساب 24/7</div>
+          <div class="float-badge fb-3"><svg class="icon"><use href="#i-star"/></svg> تقييم 4.9</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-stats reveal">
+          <div class="hero-stat">
+            <strong id="statApps">0</strong>
+            <span>تطبيق متاح</span>
+          </div>
+          <div class="hero-stat">
+            <strong id="statVisitors">0</strong>
+            <span>زائر للمنصة</span>
+          </div>
+          <div class="hero-stat">
+            <strong>5</strong>
+            <span>دقائق للتسليم</span>
+          </div>
+          <div class="hero-stat">
+            <strong>24/7</strong>
+            <span>دعم متواصل</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ شريط الأدوات ═══ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>ChatGPT Plus</span><i>✦</i><span>Claude Pro</span><i>✦</i><span>Gemini Advanced</span><i>✦</i>
+        <span>Midjourney</span><i>✦</i><span>Perplexity Pro</span><i>✦</i><span>GitHub Copilot</span><i>✦</i>
+        <span>ChatGPT Plus</span><i>✦</i><span>Claude Pro</span><i>✦</i><span>Gemini Advanced</span><i>✦</i>
+        <span>Midjourney</span><i>✦</i><span>Perplexity Pro</span><i>✦</i><span>GitHub Copilot</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ═══ التطبيقات ═══ -->
+    <section class="section" id="apps">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><svg class="icon"><use href="#i-layers"/></svg> متجر الاشتراكات</span>
+          <h2>تطبيقاتنا المتاحة الآن</h2>
+          <p>أسعار واضحة ومحدّثة، وأضف ما تحتاجه إلى السلة ثم أتمم الطلب عبر واتساب.</p>
+        </div>
+
+        <div class="apps-toolbar reveal">
+          <label class="search-box">
+            <svg class="icon"><use href="#i-search"/></svg>
+            <input type="search" id="searchInput" placeholder="ابحث عن تطبيق…" aria-label="ابحث عن تطبيق" autocomplete="off" />
+          </label>
+          <div class="chips" id="categoryChips" role="group" aria-label="تصفية حسب الفئة"></div>
+          <span class="apps-count" id="appsCount">—</span>
+        </div>
+
+        <div class="apps-grid" id="appsGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="appsEmpty" hidden>
+          <span class="empty-icon"><svg class="icon"><use href="#i-search"/></svg></span>
+          <h3>لا توجد نتائج مطابقة</h3>
+          <p>جرّب كلمة بحث أخرى أو اختر فئة مختلفة.</p>
+          <button class="btn btn-ghost" type="button" id="resetFilters">إعادة ضبط البحث</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ العروض ═══ -->
+    <section class="section offers" id="offers">
+      <div class="offers-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow accent"><svg class="icon"><use href="#i-wand"/></svg> عروض محدودة</span>
+          <h2>عروض توفّر عليك أكثر</h2>
+          <p>باقات وخصومات مختارة بعناية، والكميات محدودة — اطلب عرضك قبل انتهائه.</p>
+        </div>
+
+        <div class="offers-grid" id="offersGrid" aria-live="polite"></div>
+
+        <div class="offers-empty" id="offersEmpty" hidden>
+          <svg class="icon"><use href="#i-wand"/></svg>
+          <p>لا توجد عروض نشطة حالياً — تابعنا قريباً لعروض جديدة.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ لماذا نحن ═══ -->
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><svg class="icon"><use href="#i-shield"/></svg> لماذا Hussam-Ai</span>
+          <h2>تجربة اشتراك تستحق ثقتك</h2>
+          <p>نهتم بالتفاصيل من لحظة الطلب حتى ما بعد التسليم.</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <span class="why-icon"><svg class="icon"><use href="#i-bolt"/></svg></span>
+            <h3>تسليم فوري</h3>
+            <p>يتم تجهيز اشتراكك وإرساله عبر واتساب خلال دقائق من تأكيد الطلب.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="why-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <h3>اشتراكات أصلية</h3>
+            <p>مصادر موثوقة وضمان طوال مدة الاشتراك، بدون مفاجآت.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="why-icon"><svg class="icon"><use href="#i-wallet"/></svg></span>
+            <h3>أسعار منافسة</h3>
+            <p>نحدّث الأسعار باستمرار لنمنحك أفضل قيمة مقابل ما تدفعه.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="why-icon"><svg class="icon"><use href="#i-headset"/></svg></span>
+            <h3>دعم شخصي</h3>
+            <p>تتواصل مباشرة معي عبر واتساب قبل الطلب وبعده، بدون روبوتات.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ خطوات الطلب ═══ -->
+    <section class="section steps" id="steps">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><svg class="icon"><use href="#i-clock"/></svg> خطوات بسيطة</span>
+          <h2>اطلب اشتراكك في 3 خطوات</h2>
+          <p>لا حاجة لحساب أو بطاقة على الموقع — كل شيء يتم عبر واتساب.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step reveal">
+            <span class="step-num">01</span>
+            <h3>اختر التطبيق</h3>
+            <p>تصفّح التطبيقات المتاحة وقارن الأسعار والمزايا.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-num">02</span>
+            <h3>أضف إلى السلة</h3>
+            <p>حدّد الكمية ثم أضف اشتراكك إلى السلة بضغطة واحدة.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-num">03</span>
+            <h3>أتمم عبر واتساب</h3>
+            <p>أرسل الطلب الجاهز، وسأكمل معك التفاصيل والتسليم فوراً.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ تواصل / CTA ═══ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-glow" aria-hidden="true"></div>
+          <div class="cta-content">
+            <span class="eyebrow light"><svg class="icon"><use href="#i-whatsapp"/></svg> تواصل مباشر</span>
+            <h2>جاهز تبدأ؟ راسلني الآن على واتساب</h2>
+            <p>أخبرني بالتطبيق الذي تريده، وسأرد عليك بالتفاصيل وطريقة التسليم خلال دقائق.</p>
+            <div class="cta-actions">
+              <a class="btn btn-whatsapp btn-lg" href="#" data-whatsapp-link target="_blank" rel="noopener">
+                <svg class="icon"><use href="#i-whatsapp"/></svg>
+                محادثة واتساب
+              </a>
+              <a class="btn btn-glass btn-lg" href="#apps">
+                <svg class="icon"><use href="#i-cart"/></svg>
+                تصفّح الاشتراكات
+              </a>
+            </div>
+          </div>
+          <div class="cta-card" aria-hidden="true">
+            <div class="cta-card-top"><span class="live-dot"></span> متصل الآن</div>
+            <p class="cta-bubble">مرحباً بك في Hussam-Ai 👋<br />كيف أقدر أساعدك اليوم؟</p>
+            <div class="cta-reply">أرغب باشتراك ChatGPT Plus</div>
+            <div class="cta-card-foot"><svg class="icon"><use href="#i-check"/></svg> عادةً نرد خلال دقائق</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ التذييل ═══ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 3.5 19.7 12.3 28.5 16l-8.8 3.7L16 28.5l-3.7-8.8L3.5 16l8.8-3.7L16 3.5Z" fill="url(#bg2)"/>
+              <defs>
+                <linearGradient id="bg2" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2563EB"/><stop offset=".55" stop-color="#7C3AED"/><stop offset="1" stop-color="#EA580C"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="brand-text"><strong id="footerBrand">Hussam-Ai</strong><small>اشتراكات الذكاء الاصطناعي</small></span>
+        </a>
+        <p>منصة شخصية لعرض وبيع اشتراكات تطبيقات الذكاء الاصطناعي، بأسعار واضحة وتواصل مباشر عبر واتساب.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="روابط التذييل">
+        <h3>روابط سريعة</h3>
+        <a href="#apps">التطبيقات</a>
+        <a href="#why">لماذا نحن</a>
+        <a href="#steps">كيف تطلب</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>تواصل</h3>
+        <a href="#" data-whatsapp-link target="_blank" rel="noopener" class="footer-wa">
+          <svg class="icon"><use href="#i-whatsapp"/></svg>
+          <span id="footerWhatsapp">واتساب</span>
+        </a>
+        <p class="footer-note">الأسعار قابلة للتغيير، ويتم تأكيد التوفر قبل التسليم.</p>
+        <button class="footer-admin" type="button" id="adminTriggerFooter">
+          <svg class="icon"><use href="#i-lock"/></svg> لوحة التحكم
+        </button>
+        <button class="footer-admin" type="button" data-open-assistant>
+          <svg class="icon"><use href="#i-chat"/></svg> المساعد الذكي
+        </button>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Hussam-Ai — جميع الحقوق محفوظة.</span>
+      <span class="footer-badge"><span class="live-dot"></span> المنصة تعمل الآن</span>
+    </div>
+  </footer>
+
+  <!-- ═══ زر السلة العائم للجوال ═══ -->
+  <div class="mobile-cart-bar" id="mobileCartBar" hidden>
+    <button type="button" id="mobileCartOpen">
+      <span class="mcb-icon"><svg class="icon"><use href="#i-cart"/></svg><b id="mcbCount">0</b></span>
+      <span class="mcb-text">عرض السلة</span>
+      <strong id="mcbTotal">0 ر.س</strong>
+    </button>
+  </div>
+
+  <!-- ═══ سلة الاشتراكات ═══ -->
+  <div class="drawer-scrim" id="cartScrim" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+    <header class="drawer-head">
+      <div>
+        <h2 id="cartTitle"><svg class="icon"><use href="#i-cart"/></svg> سلة الاشتراكات</h2>
+        <p id="cartSubtitle">0 عنصر</p>
+      </div>
+      <button class="icon-btn" type="button" id="cartClose" aria-label="إغلاق السلة"><svg class="icon"><use href="#i-x"/></svg></button>
+    </header>
+
+    <div class="cart-body" id="cartBody"></div>
+
+    <footer class="cart-foot" id="cartFoot">
+      <div class="cart-total">
+        <span>الإجمالي</span>
+        <strong id="cartTotal">0 ر.س</strong>
+      </div>
+      <div class="cart-fields">
+        <label class="field">
+          <span>الاسم <em>(اختياري)</em></span>
+          <input type="text" id="orderName" maxlength="80" placeholder="اسمك الكريم" autocomplete="name" />
+        </label>
+        <label class="field">
+          <span>ملاحظة <em>(اختياري)</em></span>
+          <textarea id="orderNote" rows="2" maxlength="400" placeholder="أي تفاصيل تود إضافتها…"></textarea>
+        </label>
+      </div>
+      <button class="btn btn-whatsapp btn-block" type="button" id="checkoutBtn">
+        <svg class="icon"><use href="#i-whatsapp"/></svg>
+        إتمام الطلب عبر واتساب
+      </button>
+      <p class="cart-hint">سيُفتح واتساب برسالة جاهزة تحتوي تفاصيل طلبك — أرسلها وسأكمل معك.</p>
+    </footer>
+  </aside>
+
+  <!-- ═══ لوحة التحكم ═══ -->
+  <div class="admin-scrim" id="adminScrim" hidden></div>
+  <div class="admin-modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle" aria-hidden="true" hidden>
+    <div class="admin-panel">
+      <header class="admin-head">
+        <div class="admin-title">
+          <span class="admin-title-icon"><svg class="icon"><use href="#i-settings"/></svg></span>
+          <div>
+            <h2 id="adminTitle">لوحة تحكم Hussam-Ai</h2>
+            <p id="adminSubtitle">إدارة التطبيقات والأسعار ورقم واتساب</p>
+          </div>
+        </div>
+        <button class="icon-btn" type="button" id="adminClose" aria-label="إغلاق لوحة التحكم"><svg class="icon"><use href="#i-x"/></svg></button>
+      </header>
+
+      <!-- تسجيل الدخول -->
+      <div class="admin-login" id="adminLogin">
+        <div class="login-card">
+          <span class="login-icon"><svg class="icon"><use href="#i-lock"/></svg></span>
+          <h3>دخول المشرف</h3>
+          <p>أدخل كلمة المرور للوصول إلى إدارة المتجر.</p>
+          <form id="loginForm" novalidate>
+            <label class="field">
+              <span>كلمة المرور</span>
+              <div class="password-wrap">
+                <input type="password" id="loginPassword" autocomplete="current-password" placeholder="••••••••" required />
+                <button type="button" class="password-toggle" id="passwordToggle" aria-label="إظهار كلمة المرور">
+                  <svg class="icon"><use href="#i-eye"/></svg>
+                </button>
+              </div>
+            </label>
+            <p class="form-error" id="loginError" role="alert" hidden></p>
+            <button class="btn btn-primary btn-block" type="submit" id="loginBtn">دخول</button>
+          </form>
+          <p class="login-hint">كلمة المرور الافتراضية موضّحة في ملف README — غيّرها من الإعدادات بعد أول دخول.</p>
+        </div>
+      </div>
+
+      <!-- محتوى اللوحة -->
+      <div class="admin-app" id="adminApp" hidden>
+        <div class="admin-stats" id="adminStats"></div>
+
+        <nav class="admin-tabs" role="tablist" aria-label="أقسام لوحة التحكم">
+          <button type="button" class="admin-tab active" data-tab="apps" role="tab" aria-selected="true">
+            <svg class="icon"><use href="#i-layers"/></svg> التطبيقات
+          </button>
+          <button type="button" class="admin-tab" data-tab="orders" role="tab" aria-selected="false">
+            <svg class="icon"><use href="#i-whatsapp"/></svg> الطلبات
+          </button>
+          <button type="button" class="admin-tab" data-tab="settings" role="tab" aria-selected="false">
+            <svg class="icon"><use href="#i-settings"/></svg> الإعدادات
+          </button>
+        </nav>
+
+        <!-- تبويب التطبيقات -->
+        <section class="admin-tab-panel" data-panel="apps">
+          <div class="panel-head">
+            <div>
+              <h3>التطبيقات المعروضة</h3>
+              <p>أضف تطبيقاً جديداً أو عدّل السعر والحالة.</p>
+            </div>
+            <button class="btn btn-primary" type="button" id="addAppBtn">
+              <svg class="icon"><use href="#i-plus"/></svg> إضافة تطبيق
+            </button>
+          </div>
+
+          <div class="admin-apps-list" id="adminAppsList"></div>
+        </section>
+
+        <!-- تبويب الطلبات -->
+        <section class="admin-tab-panel" data-panel="orders" hidden>
+          <div class="panel-head">
+            <div>
+              <h3>الطلبات المسجّلة</h3>
+              <p>آخر الطلبات التي أُرسلت من السلة.</p>
+            </div>
+            <button class="btn btn-ghost btn-sm" type="button" id="refreshOrdersBtn">
+              <svg class="icon"><use href="#i-bolt"/></svg> تحديث
+            </button>
+          </div>
+          <div class="admin-orders" id="adminOrders"></div>
+        </section>
+
+        <!-- تبويب الإعدادات -->
+        <section class="admin-tab-panel" data-panel="settings" hidden>
+          <form id="settingsForm" class="settings-form">
+            <div class="panel-head">
+              <div>
+                <h3>بيانات المنصة</h3>
+                <p>غيّر رقم واتساب، اسم المنصة، والنصوص الظاهرة للزوار.</p>
+              </div>
+              <button class="btn btn-primary" type="submit" id="saveSettingsBtn">
+                <svg class="icon"><use href="#i-check"/></svg> حفظ التغييرات
+              </button>
+            </div>
+
+            <div class="form-grid">
+              <label class="field">
+                <span>اسم المنصة</span>
+                <input type="text" id="setSiteName" maxlength="40" required />
+              </label>
+              <label class="field">
+                <span>رقم واتساب <em>(مع رمز الدولة، بدون +)</em></span>
+                <input type="tel" id="setWhatsapp" placeholder="966500000000" required />
+              </label>
+              <label class="field">
+                <span>العملة</span>
+                <input type="text" id="setCurrency" maxlength="10" />
+              </label>
+              <label class="field">
+                <span>وصف مختصر</span>
+                <input type="text" id="setTagline" maxlength="160" />
+              </label>
+              <label class="field field-wide">
+                <span>العنوان الرئيسي</span>
+                <input type="text" id="setHeroTitle" maxlength="200" />
+              </label>
+              <label class="field field-wide">
+                <span>النص التعريفي</span>
+                <textarea id="setHeroText" rows="3" maxlength="400"></textarea>
+              </label>
+              <label class="field field-wide">
+                <span>الشريط العلوي</span>
+                <input type="text" id="setAnnouncement" maxlength="200" />
+              </label>
+              <div class="field field-wide assistant-settings-block">
+                <label class="switch-field">
+                  <input type="checkbox" id="setAssistantEnabled" checked />
+                  <span class="switch" aria-hidden="true"></span>
+                  <span><strong>تفعيل المساعد الآلي داخل المنصة</strong></span>
+                </label>
+                <label class="field">
+                  <span>رسالة الترحيب <em>(يظهر أسعارك وعروضك تلقائياً)</em></span>
+                  <textarea id="setAssistantGreeting" rows="2" maxlength="300" placeholder="مثال: أهلاً وسهلاً بك في Hussam-Ai 👋 كيف أساعدك اليوم؟"></textarea>
+                </label>
+              </div>
+            </div>
+          </form>
+
+          <div class="settings-cards">
+            <div class="settings-card">
+              <h4><svg class="icon"><use href="#i-lock"/></svg> كلمة المرور</h4>
+              <form id="passwordForm" class="compact-form">
+                <label class="field">
+                  <span>كلمة المرور الحالية</span>
+                  <input type="password" id="currentPassword" autocomplete="current-password" required />
+                </label>
+                <label class="field">
+                  <span>كلمة المرور الجديدة</span>
+                  <input type="password" id="newPassword" autocomplete="new-password" minlength="6" required />
+                </label>
+                <button class="btn btn-ghost btn-block" type="submit">تحديث كلمة المرور</button>
+              </form>
+            </div>
+
+            <div class="settings-card">
+              <h4><svg class="icon"><use href="#i-chart"/></svg> عدّاد الزوار</h4>
+              <p>يُحتسب العداد من الزيارات الفعلية للمنصة. يمكنك تصفيره في أي وقت.</p>
+              <button class="btn btn-danger btn-block" type="button" id="resetStatsBtn">تصفير عدّاد الزوار</button>
+            </div>
+          </div>
+        </section>
+
+        <footer class="admin-foot">
+          <span class="admin-session"><span class="live-dot"></span> جلسة نشطة</span>
+          <button class="btn btn-ghost btn-sm" type="button" id="logoutBtn">
+            <svg class="icon"><use href="#i-logout"/></svg> تسجيل الخروج
+          </button>
+        </footer>
+      </div>
+
+      <!-- محرّر التطبيق -->
+      <div class="app-editor" id="appEditor" hidden>
+        <div class="editor-head">
+          <h3 id="editorTitle">إضافة تطبيق</h3>
+          <button class="icon-btn" type="button" id="editorClose" aria-label="إغلاق المحرّر"><svg class="icon"><use href="#i-x"/></svg></button>
+        </div>
+
+        <form id="appForm" class="editor-form">
+          <input type="hidden" id="appId" />
+          <div class="form-grid">
+            <label class="field">
+              <span>اسم التطبيق *</span>
+              <input type="text" id="appName" maxlength="80" required placeholder="مثال: ChatGPT Plus" />
+            </label>
+            <label class="field">
+              <span>الشركة / المطوّر</span>
+              <input type="text" id="appVendor" maxlength="40" placeholder="مثال: OpenAI" />
+            </label>
+            <label class="field">
+              <span>سعر الاشتراك *</span>
+              <input type="number" id="appPrice" min="0" step="0.01" required placeholder="79" />
+            </label>
+            <label class="field">
+              <span>السعر قبل الخصم</span>
+              <input type="number" id="appOldPrice" min="0" step="0.01" placeholder="99" />
+            </label>
+            <label class="field">
+              <span>المدة</span>
+              <input type="text" id="appDuration" maxlength="24" placeholder="شهري" />
+            </label>
+            <label class="field">
+              <span>الفئة</span>
+              <select id="appCategory">
+                <option>محادثة</option><option>صور</option><option>برمجة</option><option>بحث</option><option>العروض</option><option>أخرى</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>الكمية المتاحة *</span>
+              <input type="number" id="appStock" min="0" max="9999" step="1" value="10" required />
+            </label>
+            <label class="field">
+              <span>شارة مميّزة</span>
+              <input type="text" id="appBadge" maxlength="32" placeholder="الأكثر مبيعاً" />
+            </label>
+            <label class="field">
+              <span>اللون</span>
+              <input type="color" id="appColor" value="#2563EB" />
+            </label>
+            <label class="field">
+              <span>الأيقونة</span>
+              <select id="appIcon">
+                <option value="sparkles">نجمة ذكية</option>
+                <option value="bot">روبوت</option>
+                <option value="brain">دماغ</option>
+                <option value="image">صورة</option>
+                <option value="search">بحث</option>
+                <option value="code">كود</option>
+                <option value="wand">عصا سحرية</option>
+                <option value="layers">طبقات</option>
+                <option value="pen">قلم</option>
+                <option value="bolt">برق</option>
+              </select>
+            </label>
+            <label class="field field-wide">
+              <span>الوصف</span>
+              <textarea id="appDescription" rows="2" maxlength="400" placeholder="وصف قصير يوضّح قيمة الاشتراك…"></textarea>
+            </label>
+            <label class="field field-wide">
+              <span>المزايا <em>(سطر لكل ميزة أو مفصولة بفاصلة)</em></span>
+              <textarea id="appFeatures" rows="3" placeholder="أحدث نماذج GPT&#10;توليد الصور&#10;بحث متقدم"></textarea>
+            </label>
+          </div>
+
+          <div class="editor-image-block">
+            <span class="editor-label">صورة التطبيق الأصلي <em>(اختياري — PNG أو JPG أو WEBP، أقل من 5 ميجابايت)</em></span>
+            <div class="image-picker" id="appImagePicker">
+              <div class="image-preview" id="appImagePreview" data-empty="1">
+                <svg class="icon"><use href="#i-image"/></svg>
+                <span>لا توجد صورة</span>
+              </div>
+              <div class="image-picker-actions">
+                <label class="btn btn-ghost btn-sm" for="appImageInput">
+                  <svg class="icon"><use href="#i-upload"/></svg> اختيار صورة
+                </label>
+                <input type="file" id="appImageInput" accept="image/png,image/jpeg,image/webp,image/gif" hidden />
+                <button class="btn btn-ghost btn-sm" type="button" id="appImageClear">
+                  <svg class="icon"><use href="#i-trash"/></svg> إزالة
+                </button>
+                <div class="image-url-row">
+                  <input type="url" id="appImageUrl" placeholder="أو ألصق رابط صورة https://…" inputmode="url" />
+                </div>
+              </div>
+            </div>
+            <p class="image-hint" id="appImageHint" hidden></p>
+          </div>
+
+          <div class="offer-block">
+            <label class="switch-field">
+              <input type="checkbox" id="appOffer" />
+              <span class="switch" aria-hidden="true"></span>
+              <span><strong>أضف إلى قسم «العروض»</strong></span>
+            </label>
+            <label class="field">
+              <span>نص العرض <em>(اختياري)</em></span>
+              <input type="text" id="appOfferText" maxlength="90" placeholder="مثال: خصم 20% لأول 10 مشتركين" />
+            </label>
+          </div>
+
+          <label class="switch-field">
+            <input type="checkbox" id="appActive" checked />
+            <span class="switch" aria-hidden="true"></span>
+            <span>معروض في المتجر</span>
+          </label>
+
+          <p class="form-error" id="appError" role="alert" hidden></p>
+
+          <div class="editor-actions">
+            <button class="btn btn-ghost" type="button" id="editorCancel">إلغاء</button>
+            <button class="btn btn-primary" type="submit" id="appSaveBtn">
+              <svg class="icon"><use href="#i-check"/></svg> حفظ التطبيق
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ المساعد الآلي ═══ -->
+  <div class="assistant" id="assistant">
+    <button class="assistant-launcher" id="assistantLauncher" type="button" aria-label="افتح المساعد الذكي" aria-expanded="false" aria-controls="assistantPanel">
+      <span class="assistant-launcher-icon">
+        <svg class="icon"><use href="#i-chat"/></svg>
+      </span>
+      <span class="assistant-launcher-pulse" aria-hidden="true"></span>
+      <span class="assistant-launcher-text">مساعد Hussam-Ai</span>
+      <span class="assistant-dot" id="assistantDot" hidden aria-hidden="true"></span>
+    </button>
+
+    <div class="assistant-teaser" id="assistantTeaser" hidden>
+      <button class="assistant-teaser-close" id="assistantTeaserClose" type="button" aria-label="إغلاق التنبيه">
+        <svg class="icon"><use href="#i-x"/></svg>
+      </button>
+      <p>مرحباً 👋 تريد معرفة الأسعار أو العروض؟ اسألني!</p>
+    </div>
+
+    <section class="assistant-panel" id="assistantPanel" role="dialog" aria-modal="false" aria-labelledby="assistantTitle" aria-hidden="true">
+      <header class="assistant-head">
+        <span class="assistant-avatar" aria-hidden="true">
+          <svg class="icon"><use href="#i-bot"/></svg>
+          <i class="assistant-online"></i>
+        </span>
+        <div class="assistant-head-text">
+          <h2 id="assistantTitle">مساعد Hussam-Ai</h2>
+          <p><span class="live-dot" aria-hidden="true"></span> يرد فوراً • أسعار وعروض محدّثة</p>
+        </div>
+        <button class="icon-btn assistant-close" id="assistantClose" type="button" aria-label="إغلاق المساعد">
+          <svg class="icon"><use href="#i-x"/></svg>
+        </button>
+      </header>
+
+      <div class="assistant-body" id="assistantBody" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+      <div class="assistant-quick" id="assistantQuick"></div>
+
+      <form class="assistant-form" id="assistantForm" autocomplete="off">
+        <label class="sr-only" for="assistantInput">اكتب سؤالك للمساعد</label>
+        <input type="text" id="assistantInput" maxlength="200" placeholder="اكتب سؤالك… مثال: كم سعر ChatGPT؟" />
+        <button class="assistant-send" type="submit" aria-label="إرسال">
+          <svg class="icon"><use href="#i-send"/></svg>
+        </button>
+      </form>
+
+      <footer class="assistant-foot">
+        <a class="assistant-wa" href="#" data-whatsapp-link target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-whatsapp"/></svg>
+          التحدث معي على واتساب
+        </a>
+      </footer>
+    </section>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

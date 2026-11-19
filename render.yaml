@@ -1,0 +1,18 @@
+# Hussam-Ai — Render Blueprint
+# After connecting this repo to Render, a new Web Service is created automatically.
+services:
+  - type: web
+    name: hussam-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/public
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: ADMIN_PASSWORD
+        generateValue: true
+# Note: free web services have no persistent disk. data/store.json is committed
+# as the initial seed; changes made in the dashboard are kept until the next
+# redeploy/restart. Use a paid plan with a disk for permanent persistence.

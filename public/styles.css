@@ -1795,6 +1795,21 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
 
 .app-flags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
 
+/* ---------- قسم الألعاب ---------- */
+.games {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(80% 60% at 12% 0%, rgba(124, 58, 237, 0.12), transparent 60%),
+    var(--bg);
+  border-block: 1px solid var(--border);
+}
+.games .eyebrow.accent {
+  background: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.3);
+  color: #7C3AED;
+}
+
 /* ---------- 23) قسم العروض ---------- */
 .offers {
   position: relative;

@@ -57,7 +57,7 @@ function safeColor(value) {
 }
 
 const ICONS = ['sparkles', 'bot', 'brain', 'image', 'search', 'code', 'wand', 'layers', 'pen', 'bolt'];
-const CATEGORIES = ['محادثة', 'صور', 'برمجة', 'بحث', 'العروض', 'أخرى'];
+const CATEGORIES = ['محادثة', 'صور', 'برمجة', 'بحث', 'ألعاب', 'العروض', 'أخرى'];
 const OFFERS_CATEGORY = 'العروض';
 const IMAGE_TYPES = {
   'image/png': '.png',

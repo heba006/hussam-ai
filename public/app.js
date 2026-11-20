@@ -224,6 +224,7 @@
   /* ---------- التطبيقات ---------- */
   const OFFERS_KEY = 'offers';
   const OFFERS_CATEGORY = 'العروض';
+  const GAMES_CATEGORY = 'ألعاب';
   const MAX_QTY = 20;
 
   const stockOf = (app) => {
@@ -255,7 +256,7 @@
     const host = $('#categoryChips');
     if (!host) return;
     const categories = [...new Set(state.apps.map((app) => app.category).filter(Boolean))]
-      .filter((cat) => cat !== OFFERS_CATEGORY);
+      .filter((cat) => cat !== OFFERS_CATEGORY && cat !== GAMES_CATEGORY);
     const offersCount = offerApps().length;
     const items = [
       { key: 'all', label: 'الكل' },
@@ -271,6 +272,7 @@
   function filteredApps() {
     const query = state.query.trim().toLowerCase();
     return state.apps.filter((app) => {
+      if (app.category === GAMES_CATEGORY) return false;
       const matchCategory = state.filter === 'all'
         ? true
         : state.filter === OFFERS_KEY
@@ -395,6 +397,15 @@
     if (empty) empty.hidden = offers.length > 0;
   }
 
+  function renderGames() {
+    const grid = $('#gamesGrid');
+    const empty = $('#gamesEmpty');
+    if (!grid) return;
+    const games = state.apps.filter((app) => app.active !== false && app.category === GAMES_CATEGORY);
+    grid.innerHTML = games.map(appCard).join('');
+    if (empty) empty.hidden = games.length > 0;
+  }
+
   function renderApps() {
     const grid = $('#appsGrid');
     const empty = $('#appsEmpty');
@@ -457,6 +468,7 @@
       renderChips();
       renderApps();
       renderOffers();
+      renderGames();
       renderShowcase();
       renderCart();
     } catch (error) {
@@ -703,6 +715,7 @@
       renderChips();
       renderApps();
       renderOffers();
+      renderGames();
       renderCart();
       closeCart();
       const soldOut = Array.isArray(result && result.soldOut) ? result.soldOut : [];
@@ -725,6 +738,7 @@
       renderChips();
       renderApps();
       renderOffers();
+      renderGames();
       renderCart();
     } catch { /* تجاهل */ }
   }
@@ -1583,6 +1597,11 @@
 
     /* التطبيقات */
     $('#appsGrid')?.addEventListener('click', (event) => {
+      const addBtn = event.target.closest('[data-add]');
+      if (addBtn) addToCart(addBtn.dataset.add);
+    });
+
+    $('#gamesGrid')?.addEventListener('click', (event) => {
       const addBtn = event.target.closest('[data-add]');
       if (addBtn) addToCart(addBtn.dataset.add);
     });

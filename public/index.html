@@ -93,6 +93,7 @@
       <nav class="main-nav" aria-label="التنقل الرئيسي">
         <a href="#home">الرئيسية</a>
         <a href="#apps">التطبيقات</a>
+        <a href="#games">الألعاب</a>
         <a href="#offers">العروض</a>
         <a href="#why">لماذا نحن</a>
         <a href="#steps">كيف تطلب</a>
@@ -260,6 +261,25 @@
       </div>
     </section>
 
+    <!-- ═══ الألعاب ═══ -->
+    <section class="section games" id="games">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow accent"><svg class="icon"><use href="#i-bolt"/></svg> قسم الألعاب</span>
+          <h2>شحن الألعاب والمتابعين</h2>
+          <p>شحن فري فاي، روبلكس، روكيت ليغ وغيرها — اختر الباقة وأضفها للسلة ثم أكمل عبر واتساب.</p>
+        </div>
+
+        <div class="apps-grid" id="gamesGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="gamesEmpty" hidden>
+          <span class="empty-icon"><svg class="icon"><use href="#i-bolt"/></svg></span>
+          <h3>لا توجد باقات ألعاب حالياً</h3>
+          <p>أضف باقات الشحن من لوحة التحكم ← التطبيقات ← الفئة «ألعاب».</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ العروض ═══ -->
     <section class="section offers" id="offers">
       <div class="offers-glow" aria-hidden="true"></div>
@@ -396,6 +416,7 @@
       <nav class="footer-links" aria-label="روابط التذييل">
         <h3>روابط سريعة</h3>
         <a href="#apps">التطبيقات</a>
+        <a href="#games">الألعاب</a>
         <a href="#why">لماذا نحن</a>
         <a href="#steps">كيف تطلب</a>
         <a href="#contact">تواصل معنا</a>
@@ -672,7 +693,7 @@
             <label class="field">
               <span>الفئة</span>
               <select id="appCategory">
-                <option>محادثة</option><option>صور</option><option>برمجة</option><option>بحث</option><option>العروض</option><option>أخرى</option>
+                <option>محادثة</option><option>صور</option><option>برمجة</option><option>بحث</option><option>ألعاب</option><option>العروض</option><option>أخرى</option>
               </select>
             </label>
             <label class="field">

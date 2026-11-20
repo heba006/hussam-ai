@@ -10,15 +10,15 @@
     "whatsapp": "962770403484",
     "currency": "د.أ",
     "password": {
-      "salt": "83995bc1b92a12c06baafec9954caa2e",
-      "hash": "b4dffeba946397c7c769fc4956a3193a74c8654a2dfbfaa6db2933ff9dcece47bb38198a3d5b48cc4294bae5095bbb97ccf2274aa2e2980c42adab227d2765fe"
+      "salt": "c449deb69804e9b40ecc607a0509665e",
+      "hash": "a711b4ac4df4cddfc317b092be38aba063ac0f1fc372aab53f104cc9cc71ed92ba33bcda16b1026ecc39158d61598a6c91470d1edef6fed12f6c4ea48ce40974"
     },
     "assistantEnabled": true,
     "assistantGreeting": ""
   },
   "stats": {
-    "visits": 56,
-    "visitors": 52,
+    "visits": 59,
+    "visitors": 55,
     "orders": 1
   },
   "seenVisitors": [
@@ -73,7 +73,10 @@
     "21468b9c-4029-45aa-9a08-8696c0656142",
     "6fa6dfb2-87b2-432b-8300-e2190535cf64",
     "af824822-83dc-4266-aa9d-01871f13ee6d",
-    "3f5bed57-acf9-4e3e-aee3-88c2483e95a4"
+    "3f5bed57-acf9-4e3e-aee3-88c2483e95a4",
+    "0e088d3b-4375-4dbe-8785-44f67b141b26",
+    "c17005ea-afde-4fa0-beb1-5095a28cb68e",
+    "97df5ca1-b814-418f-98e8-02829eb1568b"
   ],
   "apps": [
     {

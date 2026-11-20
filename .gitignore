@@ -1,8 +1,7 @@
 node_modules/
 data/*.tmp
 data/*.backup-*
-public/uploads/*
-!public/uploads/.gitkeep
+# صور التطبيقات المرفوعة تُحفظ في المستودع لتظهر بعد النشر
 server.log
 server-error.log
 public-link.txt

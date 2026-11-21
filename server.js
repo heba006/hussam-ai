@@ -414,6 +414,7 @@ function normalizeApp(input, existing) {
     category,
     description: str(input.description, 400),
     price: Math.round(price * 100) / 100,
+    priceOnRequest: input.priceOnRequest === true,
     oldPrice: Math.round(oldPrice * 100) / 100,
     duration: str(input.duration, 24) || 'شهري',
     badge: str(input.badge, 32),

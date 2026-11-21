@@ -288,12 +288,15 @@
 
   function appCard(app, index) {
     const features = Array.isArray(app.features) ? app.features.slice(0, 4) : [];
-    const oldPrice = Number(app.oldPrice) > Number(app.price);
-    const free = Number(app.price) <= 0;
+    const onRequest = app.priceOnRequest === true;
+    const oldPrice = !onRequest && Number(app.oldPrice) > Number(app.price);
+    const free = !onRequest && Number(app.price) <= 0;
     const stock = stockOf(app);
     const level = stockState(stock);
     const soldOut = stock <= 0;
-    const waMessage = `مرحباً، أرغب بالاشتراك في ${app.name}${free ? '' : ` بسعر ${money(app.price)}`}.`;
+    const waMessage = onRequest
+      ? `مرحباً، أرغب بالاستفسار عن ${app.name} والباقات المتاحة وإعرف السعر.`
+      : `مرحباً، أرغب بالاشتراك في ${app.name}${free ? '' : ` بسعر ${money(app.price)}`}.`;
 
     return `
       <article class="app-card" style="--app:${esc(app.color || '#2563EB')}; animation-delay:${Math.min(index * 45, 260)}ms">
@@ -322,19 +325,23 @@
 
         <div class="app-bottom">
           <div class="app-price">
-            ${free
-              ? `<div class="price-row"><strong class="price-free">مجاناً</strong></div>`
-              : `<div class="price-row"><strong>${nf.format(app.price)}</strong><span>${esc(state.settings.currency)} / ${esc(app.duration || 'شهري')}</span></div>`}
+            ${onRequest
+              ? `<div class="price-row"><strong class="price-request">السعر عبر واتساب</strong></div>`
+              : free
+                ? `<div class="price-row"><strong class="price-free">مجاناً</strong></div>`
+                : `<div class="price-row"><strong>${nf.format(app.price)}</strong><span>${esc(state.settings.currency)} / ${esc(app.duration || 'شهري')}</span></div>`}
             ${oldPrice ? `<span class="price-old">${nf.format(app.oldPrice)} ${esc(state.settings.currency)}</span>` : ''}
           </div>
           <div class="app-actions">
             <a class="wa-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener" aria-label="استفسار عن ${esc(app.name)} عبر واتساب">
               <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
             </a>
-            <button class="add-btn${soldOut ? ' is-out' : ''}" type="button" data-add="${esc(app.id)}" aria-label="${soldOut ? `${esc(app.name)} غير متوفر حالياً` : `أضف ${esc(app.name)} إلى السلة`}" ${soldOut ? 'disabled' : ''}>
+            ${onRequest
+              ? `<a class="add-btn ask-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> اسأل عبر واتساب</a>`
+              : `<button class="add-btn${soldOut ? ' is-out' : ''}" type="button" data-add="${esc(app.id)}" aria-label="${soldOut ? `${esc(app.name)} غير متوفر حالياً` : `أضف ${esc(app.name)} إلى السلة`}" ${soldOut ? 'disabled' : ''}>
               <svg class="icon" aria-hidden="true"><use href="#i-${soldOut ? 'box' : 'cart'}"/></svg>
               ${soldOut ? 'نفدت الكمية' : 'أضف إلى السلة'}
-            </button>
+            </button>`}
           </div>
         </div>
       </article>`;
@@ -344,8 +351,11 @@
     const stock = stockOf(app);
     const level = stockState(stock);
     const soldOut = stock <= 0;
-    const oldPrice = Number(app.oldPrice) > Number(app.price);
-    const waMessage = `مرحباً، أرغب بالاستفادة من العرض: ${app.name}${app.offerText ? ` — ${app.offerText}` : ''}.`;
+    const onRequest = app.priceOnRequest === true;
+    const oldPrice = !onRequest && Number(app.oldPrice) > Number(app.price);
+    const waMessage = onRequest
+      ? `مرحباً، أرغب بالاستفسار عن ${app.name}${app.offerText ? ` — ${app.offerText}` : ''} وإعرف السعر.`
+      : `مرحباً، أرغب بالاستفادة من العرض: ${app.name}${app.offerText ? ` — ${app.offerText}` : ''}.`;
 
     return `
       <article class="offer-card" style="--app:${esc(app.color || '#EA580C')}; animation-delay:${Math.min(index * 50, 300)}ms">
@@ -371,16 +381,18 @@
         ${stockRow(stock)}
 
         <div class="offer-price">
-          <strong>${nf.format(app.price)}</strong>
-          <span>${esc(state.settings.currency)} / ${esc(app.duration || 'شهري')}</span>
-          ${oldPrice ? `<del>${nf.format(app.oldPrice)} ${esc(state.settings.currency)}</del>` : ''}
+          ${onRequest
+            ? `<strong class="price-request">السعر عبر واتساب</strong>`
+            : `<strong>${nf.format(app.price)}</strong><span>${esc(state.settings.currency)} / ${esc(app.duration || 'شهري')}</span>${oldPrice ? `<del>${nf.format(app.oldPrice)} ${esc(state.settings.currency)}</del>` : ''}`}
         </div>
 
         <div class="offer-actions">
-          <button class="add-btn${soldOut ? ' is-out' : ''}" type="button" data-add="${esc(app.id)}" ${soldOut ? 'disabled' : ''} aria-label="${soldOut ? `${esc(app.name)} غير متوفر حالياً` : `أضف ${esc(app.name)} إلى السلة`}">
+          ${onRequest
+            ? `<a class="add-btn ask-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> اسأل عبر واتساب</a>`
+            : `<button class="add-btn${soldOut ? ' is-out' : ''}" type="button" data-add="${esc(app.id)}" ${soldOut ? 'disabled' : ''} aria-label="${soldOut ? `${esc(app.name)} غير متوفر حالياً` : `أضف ${esc(app.name)} إلى السلة`}">
             <svg class="icon" aria-hidden="true"><use href="#i-${soldOut ? 'box' : 'cart'}"/></svg>
             ${soldOut ? 'نفدت الكمية' : 'أضف إلى السلة'}
-          </button>
+          </button>`}
           <a class="wa-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener" aria-label="استفسار عن عرض ${esc(app.name)}">
             <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
           </a>
@@ -933,6 +945,7 @@
     $('#appName').value = app ? app.name : '';
     $('#appVendor').value = app ? app.vendor || '' : '';
     $('#appPrice').value = app ? app.price : '';
+    $('#appPriceOnRequest').checked = app ? Boolean(app.priceOnRequest) : false;
     $('#appOldPrice').value = app ? app.oldPrice || '' : '';
     $('#appDuration').value = app ? app.duration || 'شهري' : 'شهري';
     $('#appCategory').value = app ? app.category || 'أخرى' : 'محادثة';
@@ -1063,6 +1076,7 @@
       name: $('#appName').value.trim(),
       vendor: $('#appVendor').value.trim(),
       price: Number($('#appPrice').value),
+      priceOnRequest: $('#appPriceOnRequest').checked,
       oldPrice: Number($('#appOldPrice').value) || 0,
       duration: $('#appDuration').value.trim() || 'شهري',
       category: $('#appCategory').value,

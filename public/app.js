@@ -224,6 +224,7 @@
   /* ---------- التطبيقات ---------- */
   const OFFERS_KEY = 'offers';
   const OFFERS_CATEGORY = 'العروض';
+  const GAMES_KEY = 'games';
   const GAMES_CATEGORY = 'ألعاب';
   const MAX_QTY = 20;
 
@@ -260,9 +261,11 @@
     const categories = [...new Set(state.apps.map((app) => app.category).filter(Boolean))]
       .filter((cat) => cat !== OFFERS_CATEGORY && cat !== GAMES_CATEGORY && !HIDDEN_CHIP_CATEGORIES.includes(cat));
     const offersCount = offerApps().length;
+    const gamesCount = state.apps.filter((app) => app.category === GAMES_CATEGORY && app.active !== false).length;
     const items = [
       { key: 'all', label: 'الكل' },
       { key: OFFERS_KEY, label: `العروض${offersCount ? ` (${nf.format(offersCount)})` : ''}` },
+      { key: GAMES_KEY, label: `شحن الألعاب${gamesCount ? ` (${nf.format(gamesCount)})` : ''}` },
       ...categories.map((cat) => ({ key: cat, label: cat })),
     ];
 
@@ -274,12 +277,18 @@
   function filteredApps() {
     const query = state.query.trim().toLowerCase();
     return state.apps.filter((app) => {
-      if (app.category === GAMES_CATEGORY) return false;
+      if (state.filter === GAMES_KEY) {
+        if (app.category !== GAMES_CATEGORY) return false;
+      } else if (app.category === GAMES_CATEGORY) {
+        return false;
+      }
       const matchCategory = state.filter === 'all'
         ? true
         : state.filter === OFFERS_KEY
           ? isOffer(app)
-          : app.category === state.filter;
+          : state.filter === GAMES_KEY
+            ? true
+            : app.category === state.filter;
       if (!matchCategory) return false;
       if (!query) return true;
       return [app.name, app.vendor, app.description, app.category, app.offerText]

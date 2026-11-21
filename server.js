@@ -76,7 +76,7 @@ function seedData() {
     secret: crypto.randomBytes(32).toString('hex'),
     createdAt: now,
     settings: {
-      siteName: 'حسام',
+      siteName: 'Hussam-Ai',
       tagline: 'تطبيقات وبرامج وشحن ألعاب — أسعار واضحة وتسليم فوري',
       heroTitle: 'كل التطبيقات والبرامج اللي تحتاجها… في مكان واحد',
       heroText:
@@ -85,7 +85,7 @@ function seedData() {
       whatsapp: '962770403484',
       currency: 'ر.س',
       assistantEnabled: true,
-      assistantGreeting: 'أهلاً وسهلاً بك في متجر حسام 👋 كيف أساعدك اليوم؟',
+      assistantGreeting: 'أهلاً وسهلاً بك في متجر Hussam-Ai 👋 كيف أساعدك اليوم؟',
       password: hashPassword(INITIAL_ADMIN_PASSWORD),
     },
     stats: { visits: 0, visitors: 0, orders: 0 },

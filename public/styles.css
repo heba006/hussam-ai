@@ -1,5 +1,5 @@
 /* ==================================================================
-   حسام — نظام تصميم
+   Hussam-Ai — نظام تصميم
    Glassmorphism · أزرق ثقة + برتقالي للتحويل · Tajawal + Inter
    ================================================================== */
 
@@ -485,75 +485,124 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
 
 /* أنميشن الواجهة */
 .hero-visual { position: relative; perspective: 1200px; display: grid; place-items: center; }
-.hero-orbit {
+.hero-scene {
   position: relative;
-  width: min(100%, 420px);
+  width: min(100%, 440px);
   aspect-ratio: 1;
   display: grid;
   place-items: center;
 }
-.orbit-ring {
+.scene-glow {
   position: absolute;
-  inset: 12%;
-  border: 1px dashed color-mix(in srgb, var(--primary) 28%, transparent);
+  inset: 4%;
   border-radius: 50%;
-  animation: orbit-spin 30s linear infinite;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18), rgba(124, 58, 237, 0.10) 45%, transparent 70%);
+  filter: blur(6px);
+  animation: glow-pulse 5s ease-in-out infinite;
 }
-.orbit-ring.ring-2 {
-  inset: 26%;
-  border-style: solid;
-  border-color: color-mix(in srgb, var(--primary) 15%, transparent);
-  animation-duration: 20s;
-  animation-direction: reverse;
-}
-.orbit-core {
+.scene-core {
   position: relative;
   z-index: 2;
-  width: 112px;
-  height: 112px;
+  width: 126px;
   display: grid;
-  place-items: center;
-  border-radius: 30px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-md, var(--shadow-sm));
-  animation: core-float 4s ease-in-out infinite;
+  justify-items: center;
+  gap: 8px;
+  animation: core-bob 4.5s ease-in-out infinite;
 }
-.orbit-core svg { width: 88px; height: 88px; display: block; }
-.orbit-chip {
-  position: absolute;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 9px 13px;
+.scene-core > svg {
+  width: 104px;
+  height: 104px;
+  display: block;
+  filter: drop-shadow(0 14px 22px rgba(37, 99, 235, 0.28));
+}
+.core-label {
+  padding: 5px 12px;
   border-radius: 999px;
   background: var(--card);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.scene-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px 8px 8px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  animation: card-bob 5s ease-in-out infinite;
+}
+.scene-card img { width: 40px; height: 40px; border-radius: 11px; object-fit: cover; flex: none; }
+.scene-card span { display: grid; line-height: 1.3; }
+.scene-card strong { font-size: 0.78rem; font-weight: 800; }
+.scene-card small { font-size: 0.66rem; color: var(--muted); }
+.card-shahid { top: 6%; right: 0; }
+.card-gemini { top: 43%; left: -4%; animation-delay: -1.6s; }
+.card-claude { bottom: 9%; right: 3%; animation-delay: -3s; }
+.scene-chat {
+  position: absolute;
+  z-index: 3;
+  bottom: 24%;
+  left: -1%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22C55E, #15803D);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px rgba(21, 128, 61, 0.9);
+  font-size: 0.72rem;
   font-weight: 700;
   white-space: nowrap;
-  animation: chip-float 4.6s ease-in-out infinite;
+  animation: card-bob 4.2s ease-in-out infinite;
+  animation-delay: -2.2s;
 }
-.orbit-chip .icon { width: 17px; height: 17px; color: var(--primary); }
-.chip-apps { top: 5%; right: 0; }
-.chip-programs { top: 46%; left: -3%; animation-delay: -1.4s; }
-.chip-games { bottom: 7%; right: 4%; animation-delay: -2.7s; }
-.chip-games .icon { color: #7C3AED; }
-.chip-wa { bottom: 22%; left: 0; animation-delay: -3.5s; }
-.chip-wa .icon { color: #22C55E; }
-@keyframes orbit-spin { to { transform: rotate(360deg); } }
-@keyframes core-float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-10px) scale(1.03); }
+.chat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: dot-pulse 1.8s ease-in-out infinite;
 }
-@keyframes chip-float {
+.typing { display: inline-flex; gap: 3px; margin-inline-start: 2px; }
+.typing i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  animation: dot-bounce 1.2s ease-in-out infinite;
+}
+.typing i:nth-child(2) { animation-delay: 0.15s; }
+.typing i:nth-child(3) { animation-delay: 0.3s; }
+@keyframes glow-pulse {
+  0%, 100% { transform: scale(0.94); opacity: 0.75; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes core-bob {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes card-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18); }
+  50% { box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+}
+@keyframes dot-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-4px); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-orbit, .hero-orbit * { animation: none !important; }
+  .hero-scene, .hero-scene * { animation: none !important; }
 }
 
 .showcase {

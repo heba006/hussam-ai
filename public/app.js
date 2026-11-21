@@ -1,5 +1,5 @@
 /* ==================================================================
-   حسام — منطق الواجهة
+   Hussam-Ai — منطق الواجهة
    ================================================================== */
 (() => {
   'use strict';
@@ -18,7 +18,7 @@
 
   const state = {
     settings: {
-      siteName: 'حسام',
+      siteName: 'Hussam-Ai',
       currency: 'ر.س',
       whatsapp: '',
     },
@@ -196,10 +196,10 @@
   function applySettings() {
     const s = state.settings;
     const brandName = $('#brandName');
-    if (brandName) brandName.textContent = s.siteName || 'حسام';
+    if (brandName) brandName.textContent = s.siteName || 'Hussam-Ai';
     const footerBrand = $('#footerBrand');
-    if (footerBrand) footerBrand.textContent = s.siteName || 'حسام';
-    document.title = `${s.siteName || 'حسام'} — تطبيقات وبرامج وشحن ألعاب`;
+    if (footerBrand) footerBrand.textContent = s.siteName || 'Hussam-Ai';
+    document.title = `${s.siteName || 'Hussam-Ai'} — تطبيقات وبرامج وشحن ألعاب`;
 
     const heroTitle = $('#heroTitle');
     if (heroTitle && s.heroTitle) heroTitle.textContent = s.heroTitle;
@@ -214,7 +214,7 @@
       ? `+${s.whatsapp}`
       : 'تواصل عبر واتساب';
 
-    const message = `مرحباً ${s.siteName || 'حسام'} 👋\nأرغب بالاستفسار عن التطبيقات والبرامج وباقات الشحن.`;
+    const message = `مرحباً ${s.siteName || 'Hussam-Ai'} 👋\nأرغب بالاستفسار عن التطبيقات والبرامج وباقات الشحن.`;
     $$('[data-whatsapp-link]').forEach((link) => { link.href = waLink(message); });
 
     const year = $('#year');
@@ -697,7 +697,7 @@
 
     const name = $('#orderName')?.value.trim() || '';
     const note = $('#orderNote')?.value.trim() || '';
-    const siteName = state.settings.siteName || 'حسام';
+    const siteName = state.settings.siteName || 'Hussam-Ai';
 
     const lines = details.map(({ app, qty }) => `• ${app.name} × ${qty} — ${money(app.price * qty)}`);
     const message = [
@@ -1491,7 +1491,7 @@
     if (assistant.started) return;
     assistant.started = true;
     const greeting = state.settings.assistantGreeting
-      || `أهلاً وسهلاً بك في متجر ${state.settings.siteName || 'حسام'} 👋 كيف أساعدك اليوم؟`;
+      || `أهلاً وسهلاً بك في متجر ${state.settings.siteName || 'Hussam-Ai'} 👋 كيف أساعدك اليوم؟`;
     addAssistantMessage('bot', `<p>${esc(greeting)}</p><p>يمكنني أن أعرض لك <strong>الأسعار</strong> و<strong>العروض</strong> و<strong>المزايا</strong> و<strong>طريقة الاشتراك</strong>.</p>`, [
       { label: 'الأسعار', send: 'الأسعار' },
       { label: 'العروض', send: 'العروض' },

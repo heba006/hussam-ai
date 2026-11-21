@@ -11,7 +11,7 @@
     "assistantGreeting": "أهلاً وسهلاً في Hussam-Ai 👋🚀\nكل اشتراكات الذكاء الاصطناعي اللي بتحتاجها بمكان واحد! احكيلي أي أداة بدك، وبساعدك تختار الاشتراك الأنسب إلك وأعطيك التفاصيل والأسعار المتوفرة 💬✨"
   },
   "stats": {
-    "visits": 10,
+    "visits": 11,
     "visitors": 4,
     "orders": 2
   },
@@ -324,9 +324,10 @@
       "id": "1210dc4c-04bf-4210-8514-b373a1e31d9e",
       "name": "Canva Pro",
       "vendor": "AI",
-      "category": "محادثة",
+      "category": "برامج",
       "description": "",
       "price": 4,
+      "priceOnRequest": false,
       "oldPrice": 0,
       "duration": "شهري",
       "badge": "",
@@ -341,15 +342,16 @@
       "image": "/uploads/mwpgwroz-1cff6c3d66e4.png",
       "active": true,
       "createdAt": 1795208711559,
-      "updatedAt": 1795208711559
+      "updatedAt": 1795251709711
     },
     {
       "id": "bcf1613f-9a6b-47ff-8501-fcdeef49dc6f",
       "name": "cupcut pro",
       "vendor": "AI",
-      "category": "محادثة",
+      "category": "برامج",
       "description": "",
       "price": 4,
+      "priceOnRequest": false,
       "oldPrice": 0,
       "duration": "شهري",
       "badge": "",
@@ -362,7 +364,7 @@
       "image": "/uploads/mwpgra8a-2f4f9cacf07c.png",
       "active": true,
       "createdAt": 1795208460973,
-      "updatedAt": 1795208460973
+      "updatedAt": 1795251709426
     },
     {
       "id": "a8873b5b-f3fa-454a-b131-eddc89e1c5cf",

@@ -893,7 +893,7 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   transition: transform 0.2s var(--ease), box-shadow 0.2s ease, filter 0.2s ease;
   box-shadow: 0 8px 18px -12px rgba(29, 78, 216, 0.9);
 }
-.ask-btn { background: linear-gradient(135deg, #22C55E, #15803D); box-shadow: 0 8px 18px -12px rgba(21, 128, 61, 0.9); }
+.ask-btn { background: linear-gradient(135deg, #22C55E, #15803D); box-shadow: 0 8px 18px -12px rgba(21, 128, 61, 0.9); font-size: 0.74rem; padding-inline: 10px; }
 .add-btn .icon { width: 16px; height: 16px; }
 .add-btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
 .add-btn:active { transform: translateY(0) scale(0.98); }

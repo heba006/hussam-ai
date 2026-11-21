@@ -227,6 +227,7 @@
   const GAMES_KEY = 'games';
   const GAMES_CATEGORY = 'ألعاب';
   const PROGRAMS_CATEGORY = 'برامج';
+  const PRICE_INQUIRY_MESSAGE = 'مرحبا اريد ان استفسر عن السعر';
   const MAX_QTY = 20;
 
   const stockOf = (app) => {
@@ -307,7 +308,7 @@
     const level = stockState(stock);
     const soldOut = stock <= 0;
     const waMessage = onRequest
-      ? `مرحباً، أرغب بالاستفسار عن ${app.name} والباقات المتاحة وإعرف السعر.`
+      ? PRICE_INQUIRY_MESSAGE
       : `مرحباً، أرغب بالاشتراك في ${app.name}${free ? '' : ` بسعر ${money(app.price)}`}.`;
 
     return `
@@ -349,7 +350,7 @@
               <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
             </a>
             ${onRequest
-              ? `<a class="add-btn ask-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> اسأل عبر واتساب</a>`
+              ? `<a class="add-btn ask-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> أريد ان استفسر عن السعر</a>`
               : `<button class="add-btn${soldOut ? ' is-out' : ''}" type="button" data-add="${esc(app.id)}" aria-label="${soldOut ? `${esc(app.name)} غير متوفر حالياً` : `أضف ${esc(app.name)} إلى السلة`}" ${soldOut ? 'disabled' : ''}>
               <svg class="icon" aria-hidden="true"><use href="#i-${soldOut ? 'box' : 'cart'}"/></svg>
               ${soldOut ? 'نفدت الكمية' : 'أضف إلى السلة'}
@@ -366,7 +367,7 @@
     const onRequest = app.priceOnRequest === true;
     const oldPrice = !onRequest && Number(app.oldPrice) > Number(app.price);
     const waMessage = onRequest
-      ? `مرحباً، أرغب بالاستفسار عن ${app.name}${app.offerText ? ` — ${app.offerText}` : ''} وإعرف السعر.`
+      ? PRICE_INQUIRY_MESSAGE
       : `مرحباً، أرغب بالاستفادة من العرض: ${app.name}${app.offerText ? ` — ${app.offerText}` : ''}.`;
 
     return `
@@ -400,7 +401,7 @@
 
         <div class="offer-actions">
           ${onRequest
-            ? `<a class="add-btn ask-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> اسأل عبر واتساب</a>`
+            ? `<a class="add-btn ask-btn" href="${waLink(waMessage)}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> أريد ان استفسر عن السعر</a>`
             : `<button class="add-btn${soldOut ? ' is-out' : ''}" type="button" data-add="${esc(app.id)}" ${soldOut ? 'disabled' : ''} aria-label="${soldOut ? `${esc(app.name)} غير متوفر حالياً` : `أضف ${esc(app.name)} إلى السلة`}">
             <svg class="icon" aria-hidden="true"><use href="#i-${soldOut ? 'box' : 'cart'}"/></svg>
             ${soldOut ? 'نفدت الكمية' : 'أضف إلى السلة'}

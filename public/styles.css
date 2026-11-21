@@ -415,10 +415,10 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1.06fr 0.94fr;
   align-items: center;
+  gap: clamp(28px, 5vw, 64px);
 }
-.hero-copy { max-width: 780px; }
 
 .visitor-chip {
   display: inline-flex;
@@ -483,8 +483,78 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
 .trust-list li { display: inline-flex; align-items: center; gap: 6px; }
 .trust-list .icon { width: 16px; height: 16px; color: var(--primary); }
 
-/* العرض التوضيحي */
-.hero-visual { position: relative; perspective: 1200px; }
+/* أنميشن الواجهة */
+.hero-visual { position: relative; perspective: 1200px; display: grid; place-items: center; }
+.hero-orbit {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+.orbit-ring {
+  position: absolute;
+  inset: 12%;
+  border: 1px dashed color-mix(in srgb, var(--primary) 28%, transparent);
+  border-radius: 50%;
+  animation: orbit-spin 30s linear infinite;
+}
+.orbit-ring.ring-2 {
+  inset: 26%;
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--primary) 15%, transparent);
+  animation-duration: 20s;
+  animation-direction: reverse;
+}
+.orbit-core {
+  position: relative;
+  z-index: 2;
+  width: 112px;
+  height: 112px;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md, var(--shadow-sm));
+  animation: core-float 4s ease-in-out infinite;
+}
+.orbit-core svg { width: 88px; height: 88px; display: block; }
+.orbit-chip {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  animation: chip-float 4.6s ease-in-out infinite;
+}
+.orbit-chip .icon { width: 17px; height: 17px; color: var(--primary); }
+.chip-apps { top: 5%; right: 0; }
+.chip-programs { top: 46%; left: -3%; animation-delay: -1.4s; }
+.chip-games { bottom: 7%; right: 4%; animation-delay: -2.7s; }
+.chip-games .icon { color: #7C3AED; }
+.chip-wa { bottom: 22%; left: 0; animation-delay: -3.5s; }
+.chip-wa .icon { color: #22C55E; }
+@keyframes orbit-spin { to { transform: rotate(360deg); } }
+@keyframes core-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.03); }
+}
+@keyframes chip-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit, .hero-orbit * { animation: none !important; }
+}
 
 .showcase {
   position: relative;

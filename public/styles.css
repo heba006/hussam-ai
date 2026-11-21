@@ -955,33 +955,7 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
 .why-card h3 { font-size: 1rem; margin-bottom: 6px; }
 .why-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.8; }
 
-/* ---------- 13) الخطوات ---------- */
-.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.step {
-  position: relative;
-  padding: 28px 24px;
-  border-radius: 22px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  overflow: hidden;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
-}
-.step:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
-.step-num {
-  font-family: var(--font-num);
-  font-size: 2.6rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px color-mix(in srgb, var(--primary) 45%, transparent);
-  display: block;
-  margin-bottom: 16px;
-}
-.step h3 { font-size: 1.02rem; margin-bottom: 6px; }
-.step p { font-size: 0.85rem; color: var(--muted); }
-
-/* ---------- 14) شريط الدعوة ---------- */
+/* ---------- 13) شريط الدعوة ---------- */
 .cta-band {
   position: relative;
   overflow: hidden;
@@ -1617,7 +1591,6 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   .hero-stat:nth-child(1)::before, .hero-stat:nth-child(3)::before { display: none; }
   .cta-band { grid-template-columns: 1fr; }
   .cta-card { max-width: 420px; }
-  .steps-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {

@@ -1,19 +1,19 @@
 {
   "settings": {
-    "siteName": "Hussam-Ai",
-    "tagline": "اشتراكات الذكاء الاصطناعي الأصلية — أسعار واضحة وتسليم فوري",
-    "heroTitle": "كل تطبيقات الذكاء الاصطناعي التي تحتاجها… في مكان واحد",
-    "heroText": "اختر التطبيق الذي يناسبك، أضفه إلى السلة، وأتمم اشتراكك عبر واتساب خلال دقائق. أسعار منافسة، بدون وسطاء، ودعم بشري في كل خطوة.",
+    "siteName": "حسام",
+    "tagline": "تطبيقات وبرامج وشحن ألعاب — أسعار واضحة وتسليم فوري",
+    "heroTitle": "كل التطبيقات والبرامج اللي تحتاجها… في مكان واحد",
+    "heroText": "اختر التطبيق أو البرنامج أو باقة الشحن اللي تحتاجها، وأتمم طلبك عبر واتساب خلال دقائق. أسعار منافسة، بدون وسطاء، ودعم بشري في كل خطوة.",
     "announcement": "تسليم فوري خلال دقائق • دعم مباشر عبر واتساب • أسعار قابلة للتحديث",
     "whatsapp": "962770403484",
     "currency": "د.أ",
     "assistantEnabled": false,
-    "assistantGreeting": "أهلاً وسهلاً في Hussam-Ai 👋🚀\nكل اشتراكات الذكاء الاصطناعي اللي بتحتاجها بمكان واحد! احكيلي أي أداة بدك، وبساعدك تختار الاشتراك الأنسب إلك وأعطيك التفاصيل والأسعار المتوفرة 💬✨"
+    "assistantGreeting": "أهلاً وسهلاً بك في متجر حسام 👋\nاختر التطبيق أو البرنامج أو باقة الشحن اللي تحتاجها وأساعدك بالتفاصيل."
   },
   "stats": {
-    "visits": 18,
-    "visitors": 5,
-    "orders": 2
+    "visits": 21,
+    "visitors": 7,
+    "orders": 3
   },
   "apps": [
     {
@@ -365,7 +365,7 @@
         "صياغة تسويقية أقوى:",
         "خلّي ChatGPT Plus يساعدك تنجز أكثر 🚀 من الكتابة والدراسة للبرمجة وتحليل الملفات وتوليد ال"
       ],
-      "stock": 10,
+      "stock": 9,
       "offer": false,
       "offerText": "",
       "image": "/uploads/mwpg6tch-f28eae574d14.jpg",
@@ -392,42 +392,40 @@
         "كتابة احترافية",
         "استجابة سريعة"
       ],
-      "stock": 8,
+      "stock": 7,
       "offer": false,
       "offerText": "",
       "image": "/uploads/claude.webp",
       "active": true,
       "createdAt": 1794942892340,
       "updatedAt": 1795253970489
-    },
-    {
-      "id": "26806103-981b-472c-9a8a-c01c2e06b2c2",
-      "name": "ChatGPT Plus",
-      "vendor": "OpenAI",
-      "category": "محادثة",
-      "description": "حساب خاص من 7-8 اجهزة",
-      "price": 12,
-      "oldPrice": 13,
-      "duration": "شهري",
-      "badge": "الأكثر مبيعاً",
-      "color": "#10a37f",
-      "icon": "sparkles",
-      "features": [
-        "أحدث نماذج GPT",
-        "توليد وتحليل الصور",
-        "تصفح وبحث متقدم",
-        "أولوية عند الضغط"
-      ],
-      "stock": 4,
-      "offer": false,
-      "offerText": "خصم 20% لاول شخص",
-      "image": "/uploads/mwpgkebq-2da107de5e83.png",
-      "active": true,
-      "createdAt": 1794942882340,
-      "updatedAt": 1795208131009
     }
   ],
   "orders": [
+    {
+      "id": "a633c3b7-f07e-4144-b779-6f5a837cc763",
+      "items": [
+        {
+          "id": "a8873b5b-f3fa-454a-b131-eddc89e1c5cf",
+          "name": "chatgpt",
+          "price": 3.5,
+          "qty": 1
+        },
+        {
+          "id": "3f0d1f4c-6113-4551-a190-f1f67f778ff0",
+          "name": "Claude Pro",
+          "price": 13,
+          "qty": 1
+        }
+      ],
+      "total": 16.5,
+      "currency": "د.أ",
+      "name": "Taimaa Freahat",
+      "phone": "",
+      "note": "",
+      "channel": "whatsapp",
+      "createdAt": 1795254726386
+    },
     {
       "id": "edc1930b-82e6-47ef-8caf-f71ebb5af230",
       "items": [

@@ -196,9 +196,15 @@
   function applySettings() {
     const s = state.settings;
     const brandName = $('#brandName');
-    if (brandName) brandName.textContent = s.siteName || 'Hussam-Ai';
+    if (brandName) {
+      if (brandName.tagName === 'IMG') brandName.alt = s.siteName || 'Hussam-Ai';
+      else brandName.textContent = s.siteName || 'Hussam-Ai';
+    }
     const footerBrand = $('#footerBrand');
-    if (footerBrand) footerBrand.textContent = s.siteName || 'Hussam-Ai';
+    if (footerBrand) {
+      if (footerBrand.tagName === 'IMG') footerBrand.alt = s.siteName || 'Hussam-Ai';
+      else footerBrand.textContent = s.siteName || 'Hussam-Ai';
+    }
     document.title = `${s.siteName || 'Hussam-Ai'} — تطبيقات وبرامج وشحن ألعاب`;
 
     const heroTitle = $('#heroTitle');

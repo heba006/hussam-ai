@@ -317,6 +317,10 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   color: transparent;
 }
 .brand-text small { font-size: 0.64rem; color: var(--muted); font-weight: 500; }
+.brand-logo { display: block; height: 30px; width: auto; max-width: 100%; object-fit: contain; }
+.footer-brand-logo { height: 27px; }
+.inline-logo { height: 17px; width: auto; vertical-align: middle; object-fit: contain; }
+.phone-logo { display: block; height: 20px; width: auto; max-width: 100%; object-fit: contain; }
 
 .main-nav { display: flex; align-items: center; gap: 4px; margin-inline-start: 14px; }
 .main-nav a {

@@ -252,11 +252,13 @@
     return `<div class="${className}"><img src="${esc(app.image)}" alt="صورة ${esc(app.name)}" loading="lazy" decoding="async" /></div>`;
   }
 
+  const HIDDEN_CHIP_CATEGORIES = ['صور', 'محادثة', 'أخرى'];
+
   function renderChips() {
     const host = $('#categoryChips');
     if (!host) return;
     const categories = [...new Set(state.apps.map((app) => app.category).filter(Boolean))]
-      .filter((cat) => cat !== OFFERS_CATEGORY && cat !== GAMES_CATEGORY);
+      .filter((cat) => cat !== OFFERS_CATEGORY && cat !== GAMES_CATEGORY && !HIDDEN_CHIP_CATEGORIES.includes(cat));
     const offersCount = offerApps().length;
     const items = [
       { key: 'all', label: 'الكل' },

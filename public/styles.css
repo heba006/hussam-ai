@@ -311,14 +311,14 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   font-size: 1.16rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(100deg, #2563EB, #7C3AED 55%, #EA580C);
+  background: linear-gradient(100deg, #2563EB, #7C3AED 35%, #EA580C 70%, #2563EB);
+  background-size: 220% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: gradient-flow 9s linear infinite;
 }
 .brand-text small { font-size: 0.64rem; color: var(--muted); font-weight: 500; }
-.brand-logo { display: block; width: auto; height: auto; max-height: 30px; max-width: 140px; object-fit: contain; }
-.footer-brand-logo { max-height: 28px; }
 
 .main-nav { display: flex; align-items: center; gap: 4px; margin-inline-start: 14px; }
 .main-nav a {
@@ -459,8 +459,14 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   font-weight: 700;
   line-height: 1.28;
   max-width: 17ch;
+  background: linear-gradient(100deg, var(--fg), #6EA8FF 32%, #B69CFF 60%, #FFA66B 85%, var(--fg));
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-flow 11s linear infinite;
 }
-.hero h1::first-line { color: var(--fg); }
+.hero h1::first-line { color: transparent; }
 
 .hero-text {
   margin-top: 16px;
@@ -859,6 +865,13 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   0% { transform: translateY(-5px); opacity: 0.35; }
   100% { transform: none; opacity: 1; }
 }
+@keyframes gradient-flow {
+  from { background-position: 0% center; }
+  to { background-position: 200% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-text strong, .hero h1, .site-footer .brand-text strong { animation: none !important; }
+}
 .hero-stat span { font-size: 0.76rem; color: var(--muted); }
 
 /* ---------- 8) شريط الأدوات المتحرك ---------- */
@@ -1247,7 +1260,7 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   gap: 32px;
   padding-bottom: 34px;
 }
-.site-footer .brand-text strong { background: linear-gradient(100deg, #6EA8FF, #B69CFF 55%, #FFA66B); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.site-footer .brand-text strong { background: linear-gradient(100deg, #6EA8FF, #B69CFF 35%, #FFA66B 70%, #6EA8FF); background-size: 220% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradient-flow 10s linear infinite; }
 .site-footer .brand-text small { color: #8497B3; }
 .site-footer .brand-mark { background: transparent; filter: drop-shadow(0 6px 14px rgba(124, 58, 237, 0.35)); }
 .footer-brand p { margin-top: 14px; font-size: 0.83rem; line-height: 1.9; max-width: 38ch; color: #93A5C0; }

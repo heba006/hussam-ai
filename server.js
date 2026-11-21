@@ -258,6 +258,21 @@ function loadData() {
       console.warn('[Hussam-Ai] تعذّر قراءة ملف البيانات، سيتم إنشاء ملف جديد:', error.message);
     }
     const fresh = seedData();
+    // استخدم نسخة البداية إن وُجدت (بدون الأسرار) عند أول تشغيل على استضافة جديدة
+    try {
+      const seedPath = path.join(DATA_DIR, 'seed.json');
+      if (fs.existsSync(seedPath)) {
+        const seed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
+        if (Array.isArray(seed.apps)) fresh.apps = seed.apps.map(migrateApp);
+        if (Array.isArray(seed.orders)) fresh.orders = seed.orders;
+        if (seed.stats) fresh.stats = seed.stats;
+        if (seed.settings) fresh.settings = { ...fresh.settings, ...seed.settings };
+      }
+    } catch (error) {
+      console.warn('[Hussam-Ai] تعذّر قراءة seed.json:', error.message);
+    }
+    fresh.secret = crypto.randomBytes(32).toString('hex');
+    fresh.settings.password = hashPassword(INITIAL_ADMIN_PASSWORD);
     fs.mkdirSync(DATA_DIR, { recursive: true });
     fs.writeFileSync(DATA_FILE, JSON.stringify(fresh, null, 2), 'utf8');
     return fresh;

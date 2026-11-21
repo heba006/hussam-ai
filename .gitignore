@@ -1,4 +1,5 @@
 node_modules/
+data/store.json
 data/*.tmp
 data/*.backup-*
 # صور التطبيقات المرفوعة تُحفظ في المستودع لتظهر بعد النشر

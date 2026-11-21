@@ -1,6 +1,4 @@
 {
-  "secret": "325f028ec0188a105d8dac02d83b4222dfbb269f2f36e2528499b9125bd96587",
-  "createdAt": 1794942942340,
   "settings": {
     "siteName": "Hussam-Ai",
     "tagline": "اشتراكات الذكاء الاصطناعي الأصلية — أسعار واضحة وتسليم فوري",
@@ -9,22 +7,14 @@
     "announcement": "تسليم فوري خلال دقائق • دعم مباشر عبر واتساب • أسعار قابلة للتحديث",
     "whatsapp": "962770403484",
     "currency": "د.أ",
-    "password": {
-      "salt": "c449deb69804e9b40ecc607a0509665e",
-      "hash": "a711b4ac4df4cddfc317b092be38aba063ac0f1fc372aab53f104cc9cc71ed92ba33bcda16b1026ecc39158d61598a6c91470d1edef6fed12f6c4ea48ce40974"
-    },
     "assistantEnabled": false,
     "assistantGreeting": "أهلاً وسهلاً في Hussam-Ai 👋🚀\nكل اشتراكات الذكاء الاصطناعي اللي بتحتاجها بمكان واحد! احكيلي أي أداة بدك، وبساعدك تختار الاشتراك الأنسب إلك وأعطيك التفاصيل والأسعار المتوفرة 💬✨"
   },
   "stats": {
-    "visits": 4,
-    "visitors": 2,
+    "visits": 5,
+    "visitors": 3,
     "orders": 2
   },
-  "seenVisitors": [
-    "97df5ca1-b814-418f-98e8-02829eb1568b",
-    "0e088d3b-4375-4dbe-8785-44f67b141b26"
-  ],
   "apps": [
     {
       "id": "26806103-981b-472c-9a8a-c01c2e06b2c2",

@@ -11,13 +11,13 @@
     "assistantGreeting": "أهلاً وسهلاً في Hussam-Ai 👋🚀\nكل اشتراكات الذكاء الاصطناعي اللي بتحتاجها بمكان واحد! احكيلي أي أداة بدك، وبساعدك تختار الاشتراك الأنسب إلك وأعطيك التفاصيل والأسعار المتوفرة 💬✨"
   },
   "stats": {
-    "visits": 7,
+    "visits": 10,
     "visitors": 4,
     "orders": 2
   },
   "apps": [
     {
-      "id": "85f83060-d239-45ba-a27e-fd7ffd9dae36",
+      "id": "ea64ec87-13f8-400d-9bd2-6629924f4343",
       "name": "شحن متابعين",
       "vendor": "خدمات سوشيال",
       "category": "ألعاب",
@@ -39,8 +39,30 @@
       "offerText": "",
       "image": "",
       "active": true,
-      "createdAt": 1795249757197,
-      "updatedAt": 1795249757197
+      "createdAt": 1795250974127,
+      "updatedAt": 1795250974127
+    },
+    {
+      "id": "955b3eb0-589d-40ec-accd-3b37f5dd12e1",
+      "name": "شاهد",
+      "vendor": "AI",
+      "category": "صور",
+      "description": "",
+      "price": 2.5,
+      "priceOnRequest": false,
+      "oldPrice": 0,
+      "duration": "شهري",
+      "badge": "",
+      "color": "#2563eb",
+      "icon": "sparkles",
+      "features": [],
+      "stock": 10,
+      "offer": false,
+      "offerText": "",
+      "image": "/uploads/mwq5r70i-38b9343a27ca.png",
+      "active": true,
+      "createdAt": 1795250442651,
+      "updatedAt": 1795250467318
     },
     {
       "id": "b31c2a50-20a4-41ce-a5a9-783520b3dc8c",
@@ -349,6 +371,7 @@
       "category": "أخرى",
       "description": "مشترك",
       "price": 3.5,
+      "priceOnRequest": false,
       "oldPrice": 4,
       "duration": "شهري",
       "badge": "",
@@ -364,7 +387,7 @@
       "image": "/uploads/mwpg6tch-f28eae574d14.jpg",
       "active": true,
       "createdAt": 1794984836926,
-      "updatedAt": 1795207498334
+      "updatedAt": 1795250494377
     },
     {
       "id": "3f0d1f4c-6113-4551-a190-f1f67f778ff0",

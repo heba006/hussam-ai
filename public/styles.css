@@ -1,6 +1,6 @@
 /* ==================================================================
-   Hussam-Ai — نظام تصميم
-   Glassmorphism · أزرق ثقة + برتقالي للتحويل · Inter + IBM Plex Sans Arabic
+   حسام — نظام تصميم
+   Glassmorphism · أزرق ثقة + برتقالي للتحويل · Tajawal + Inter
    ================================================================== */
 
 /* ---------- 1) المتغيّرات ---------- */
@@ -35,7 +35,7 @@
   --radius: 20px;
   --radius-lg: 28px;
   --header-h: 76px;
-  --font-ar: "IBM Plex Sans Arabic", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-ar: "Tajawal", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-num: "Inter", "IBM Plex Sans Arabic", system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 0.9, 0.28, 1);
 }
@@ -415,10 +415,10 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.06fr 0.94fr;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  gap: clamp(28px, 5vw, 64px);
 }
+.hero-copy { max-width: 780px; }
 
 .visitor-chip {
   display: inline-flex;

@@ -281,11 +281,45 @@ function loadData() {
 
 let data = loadData();
 
+const GIST_ID = process.env.GIST_ID || '';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
+
+async function loadFromGist() {
+  if (!GIST_ID || !GITHUB_TOKEN) return;
+  const response = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+    headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'hussam-ai', Accept: 'application/vnd.github+json' },
+  });
+  if (!response.ok) throw new Error(`gist fetch: ${response.status}`);
+  const gist = await response.json();
+  const file = gist.files && gist.files['store.json'];
+  if (!file || !file.content) return;
+  fs.writeFileSync(DATA_FILE, file.content, 'utf8');
+  data = loadData();
+  console.log('[Hussam-Ai] تم تحميل البيانات من التخزين السحابي');
+}
+
+function syncToGist() {
+  if (!GIST_ID || !GITHUB_TOKEN) return;
+  fetch(`https://api.github.com/gists/${GIST_ID}`, {
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      'Content-Type': 'application/json',
+      'User-Agent': 'hussam-ai',
+      Accept: 'application/vnd.github+json',
+    },
+    body: JSON.stringify({ files: { 'store.json': { content: JSON.stringify(data, null, 2) } } }),
+  }).then((response) => {
+    if (!response.ok) console.warn('[Hussam-Ai] تعذّر حفظ البيانات سحابياً:', response.status);
+  }).catch((error) => console.warn('[Hussam-Ai] تعذّر حفظ البيانات سحابياً:', error.message));
+}
+
 function saveData() {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   const tmp = DATA_FILE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2), 'utf8');
   fs.renameSync(tmp, DATA_FILE);
+  syncToGist();
 }
 
 if (!data.settings.password) {
@@ -821,16 +855,20 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, HOST, () => {
-  const password = data.settings.password && verifyPassword(INITIAL_ADMIN_PASSWORD, data.settings.password)
-    ? INITIAL_ADMIN_PASSWORD
-    : '(كلمة المرور التي عيّنتها)';
-  console.log('');
-  console.log('  ╔══════════════════════════════════════════════════╗');
-  console.log('  ║            Hussam-Ai  •  منصة الاشتراكات          ║');
-  console.log('  ╚══════════════════════════════════════════════════╝');
-  console.log('  المتجر:      http://localhost:' + PORT);
-  console.log('  لوحة التحكم: زر «لوحة التحكم» في الترويسة');
-  console.log('  كلمة المرور: ' + password);
-  console.log('');
+loadFromGist().catch((error) => {
+  console.warn('[Hussam-Ai] تعذّر تحميل البيانات من التخزين السحابي:', error.message);
+}).finally(() => {
+  server.listen(PORT, HOST, () => {
+    const password = data.settings.password && verifyPassword(INITIAL_ADMIN_PASSWORD, data.settings.password)
+      ? INITIAL_ADMIN_PASSWORD
+      : '(كلمة المرور التي عيّنتها)';
+    console.log('');
+    console.log('  ╔══════════════════════════════════════════════════╗');
+    console.log('  ║            Hussam-Ai  •  منصة الاشتراكات          ║');
+    console.log('  ╚══════════════════════════════════════════════════╝');
+    console.log('  المتجر:      http://localhost:' + PORT);
+    console.log('  لوحة التحكم: زر «لوحة التحكم» في الترويسة');
+    console.log('  كلمة المرور: ' + password);
+    console.log('');
+  });
 });

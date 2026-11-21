@@ -93,6 +93,7 @@
       <nav class="main-nav" aria-label="التنقل الرئيسي">
         <a href="#home">الرئيسية</a>
         <a href="#apps">التطبيقات</a>
+        <a href="#programs">البرامج</a>
         <a href="#games">الألعاب</a>
         <a href="#offers">العروض</a>
         <a href="#why">لماذا نحن</a>
@@ -237,7 +238,7 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow"><svg class="icon"><use href="#i-layers"/></svg> متجر الاشتراكات</span>
-          <h2>تطبيقاتنا المتاحة الآن</h2>
+          <h2>تطبيقات الذكاء الاصطناعي</h2>
           <p>أسعار واضحة ومحدّثة، وأضف ما تحتاجه إلى السلة ثم أتمم الطلب عبر واتساب.</p>
         </div>
 
@@ -257,6 +258,25 @@
           <h3>لا توجد نتائج مطابقة</h3>
           <p>جرّب كلمة بحث أخرى أو اختر فئة مختلفة.</p>
           <button class="btn btn-ghost" type="button" id="resetFilters">إعادة ضبط البحث</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ البرامج ═══ -->
+    <section class="section programs" id="programs">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow accent"><svg class="icon"><use href="#i-layers"/></svg> قسم البرامج</span>
+          <h2>البرامج وأدوات العمل</h2>
+          <p>برامج التصميم والمونتاج والإنتاجية — اختر البرنامج المناسب وأكمل الطلب عبر واتساب.</p>
+        </div>
+
+        <div class="apps-grid" id="programsGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="programsEmpty" hidden>
+          <span class="empty-icon"><svg class="icon"><use href="#i-layers"/></svg></span>
+          <h3>لا توجد برامج حالياً</h3>
+          <p>أضف البرامج من لوحة التحكم ← التطبيقات ← الفئة «برامج».</p>
         </div>
       </div>
     </section>
@@ -416,6 +436,7 @@
       <nav class="footer-links" aria-label="روابط التذييل">
         <h3>روابط سريعة</h3>
         <a href="#apps">التطبيقات</a>
+        <a href="#programs">البرامج</a>
         <a href="#games">الألعاب</a>
         <a href="#why">لماذا نحن</a>
         <a href="#steps">كيف تطلب</a>
@@ -698,7 +719,7 @@
             <label class="field">
               <span>الفئة</span>
               <select id="appCategory">
-                <option>محادثة</option><option>صور</option><option>برمجة</option><option>بحث</option><option>ألعاب</option><option>العروض</option><option>أخرى</option>
+                <option>محادثة</option><option>صور</option><option>برمجة</option><option>بحث</option><option>برامج</option><option>ألعاب</option><option>العروض</option><option>أخرى</option>
               </select>
             </label>
             <label class="field">

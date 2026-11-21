@@ -226,6 +226,7 @@
   const OFFERS_CATEGORY = 'العروض';
   const GAMES_KEY = 'games';
   const GAMES_CATEGORY = 'ألعاب';
+  const PROGRAMS_CATEGORY = 'برامج';
   const MAX_QTY = 20;
 
   const stockOf = (app) => {
@@ -259,7 +260,7 @@
     const host = $('#categoryChips');
     if (!host) return;
     const categories = [...new Set(state.apps.map((app) => app.category).filter(Boolean))]
-      .filter((cat) => cat !== OFFERS_CATEGORY && cat !== GAMES_CATEGORY && !HIDDEN_CHIP_CATEGORIES.includes(cat));
+      .filter((cat) => cat !== OFFERS_CATEGORY && cat !== GAMES_CATEGORY && cat !== PROGRAMS_CATEGORY && !HIDDEN_CHIP_CATEGORIES.includes(cat));
     const offersCount = offerApps().length;
     const gamesCount = state.apps.filter((app) => app.category === GAMES_CATEGORY && app.active !== false).length;
     const items = [
@@ -279,7 +280,7 @@
     return state.apps.filter((app) => {
       if (state.filter === GAMES_KEY) {
         if (app.category !== GAMES_CATEGORY) return false;
-      } else if (app.category === GAMES_CATEGORY) {
+      } else if (app.category === GAMES_CATEGORY || app.category === PROGRAMS_CATEGORY) {
         return false;
       }
       const matchCategory = state.filter === 'all'
@@ -429,6 +430,15 @@
     if (empty) empty.hidden = games.length > 0;
   }
 
+  function renderPrograms() {
+    const grid = $('#programsGrid');
+    const empty = $('#programsEmpty');
+    if (!grid) return;
+    const programs = state.apps.filter((app) => app.active !== false && app.category === PROGRAMS_CATEGORY);
+    grid.innerHTML = programs.map(appCard).join('');
+    if (empty) empty.hidden = programs.length > 0;
+  }
+
   function renderApps() {
     const grid = $('#appsGrid');
     const empty = $('#appsEmpty');
@@ -439,10 +449,11 @@
     grid.innerHTML = apps.map(appCard).join('');
     if (empty) empty.hidden = apps.length > 0;
 
+    const total = state.apps.filter((app) => app.category !== GAMES_CATEGORY && app.category !== PROGRAMS_CATEGORY).length;
     if (count) {
-      count.textContent = apps.length === state.apps.length
+      count.textContent = apps.length === total
         ? `${nf.format(apps.length)} تطبيقات متاحة`
-        : `${nf.format(apps.length)} من ${nf.format(state.apps.length)}`;
+        : `${nf.format(apps.length)} من ${nf.format(total)}`;
     }
   }
 
@@ -492,6 +503,7 @@
       renderApps();
       renderOffers();
       renderGames();
+      renderPrograms();
       renderShowcase();
       renderCart();
     } catch (error) {
@@ -739,6 +751,7 @@
       renderApps();
       renderOffers();
       renderGames();
+      renderPrograms();
       renderCart();
       closeCart();
       const soldOut = Array.isArray(result && result.soldOut) ? result.soldOut : [];
@@ -762,6 +775,7 @@
       renderApps();
       renderOffers();
       renderGames();
+      renderPrograms();
       renderCart();
     } catch { /* تجاهل */ }
   }

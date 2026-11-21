@@ -1798,6 +1798,21 @@ h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
 
 .app-flags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
 
+/* ---------- قسم البرامج ---------- */
+.programs {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(80% 60% at 88% 0%, rgba(37, 99, 235, 0.1), transparent 60%),
+    var(--bg);
+  border-block: 1px solid var(--border);
+}
+.programs .eyebrow.accent {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.3);
+  color: #2563EB;
+}
+
 /* ---------- قسم الألعاب ---------- */
 .games {
   position: relative;

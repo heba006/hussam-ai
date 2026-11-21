@@ -11,40 +11,14 @@
     "assistantGreeting": "أهلاً وسهلاً في Hussam-Ai 👋🚀\nكل اشتراكات الذكاء الاصطناعي اللي بتحتاجها بمكان واحد! احكيلي أي أداة بدك، وبساعدك تختار الاشتراك الأنسب إلك وأعطيك التفاصيل والأسعار المتوفرة 💬✨"
   },
   "stats": {
-    "visits": 11,
-    "visitors": 4,
+    "visits": 18,
+    "visitors": 5,
     "orders": 2
   },
   "apps": [
     {
-      "id": "ea64ec87-13f8-400d-9bd2-6629924f4343",
-      "name": "شحن متابعين",
-      "vendor": "خدمات سوشيال",
-      "category": "ألعاب",
-      "description": "زيادة متابعين — السعر عبر واتساب.",
-      "price": 0,
-      "priceOnRequest": true,
-      "oldPrice": 0,
-      "duration": "شحنة واحدة",
-      "badge": "",
-      "color": "#7C3AED",
-      "icon": "bolt",
-      "features": [
-        "متابعون حقيقيون",
-        "تسليم تدريجي",
-        "دعم عبر واتساب"
-      ],
-      "stock": 30,
-      "offer": false,
-      "offerText": "",
-      "image": "",
-      "active": true,
-      "createdAt": 1795250974127,
-      "updatedAt": 1795250974127
-    },
-    {
       "id": "955b3eb0-589d-40ec-accd-3b37f5dd12e1",
-      "name": "شاهد",
+      "name": "Shahid VIP",
       "vendor": "AI",
       "category": "صور",
       "description": "",
@@ -55,18 +29,25 @@
       "badge": "",
       "color": "#2563eb",
       "icon": "sparkles",
-      "features": [],
+      "features": [
+        "مزايا شاهد VIP:",
+        "- مسلسلات وأفلام عربية حصرية",
+        "- أعمال شاهد الأصلية ومحتوى أجنبي متنوع",
+        "- قنوات MBC مباشرة",
+        "- مشاهدة بدون إعلانات",
+        "- جودة HD أو 4K لبعض المحتوى"
+      ],
       "stock": 10,
       "offer": false,
       "offerText": "",
-      "image": "/uploads/mwq5r70i-38b9343a27ca.png",
+      "image": "/uploads/shahid.webp",
       "active": true,
       "createdAt": 1795250442651,
-      "updatedAt": 1795250467318
+      "updatedAt": 1795253969962
     },
     {
       "id": "b31c2a50-20a4-41ce-a5a9-783520b3dc8c",
-      "name": "شحن روكيت ليغ",
+      "name": "Rocket League Credits",
       "vendor": "Epic Games",
       "category": "ألعاب",
       "description": "شحن روكيت ليغ وعملات اللعبة — السعر عبر واتساب.",
@@ -75,7 +56,7 @@
       "oldPrice": 0,
       "duration": "شحنة واحدة",
       "badge": "",
-      "color": "#1E90FF",
+      "color": "#1e90ff",
       "icon": "bolt",
       "features": [
         "شحن مباشر",
@@ -88,11 +69,11 @@
       "image": "/uploads/rocket-league.webp",
       "active": true,
       "createdAt": 1795249756925,
-      "updatedAt": 1795249756925
+      "updatedAt": 1795252007924
     },
     {
       "id": "9d05ec62-8fd9-49a1-890b-7f85c4922a3e",
-      "name": "شحن روبلكس",
+      "name": "Roblox",
       "vendor": "Roblox",
       "category": "ألعاب",
       "description": "شحن روبكس Roblox — كل الباقات متوفرة، السعر عبر واتساب.",
@@ -101,7 +82,7 @@
       "oldPrice": 0,
       "duration": "شحنة واحدة",
       "badge": "",
-      "color": "#E2231A",
+      "color": "#e2231a",
       "icon": "bolt",
       "features": [
         "شحن روبكس",
@@ -114,11 +95,11 @@
       "image": "/uploads/roblox.webp",
       "active": true,
       "createdAt": 1795249756656,
-      "updatedAt": 1795249756656
+      "updatedAt": 1795252030661
     },
     {
       "id": "2990ba2f-eede-4e1d-bde9-3a60859e15d4",
-      "name": "بلياردو — كاش وكوينز",
+      "name": "8 Ball Pool",
       "vendor": "8 Ball Pool",
       "category": "ألعاب",
       "description": "بلياردو: شحن كاش متوفر وكوينز متوفرة — اختر النوع وأرسل عبر واتساب.",
@@ -127,7 +108,7 @@
       "oldPrice": 0,
       "duration": "شحنة واحدة",
       "badge": "",
-      "color": "#0EA5E9",
+      "color": "#0ea5e9",
       "icon": "bolt",
       "features": [
         "شحن كاش",
@@ -140,11 +121,11 @@
       "image": "/uploads/8ball-pool.webp",
       "active": true,
       "createdAt": 1795249756376,
-      "updatedAt": 1795249756376
+      "updatedAt": 1795252052450
     },
     {
       "id": "d16d81f4-ccf6-4d26-9595-c44a8b8492e1",
-      "name": "شحن فري فاير",
+      "name": "Free fire",
       "vendor": "Garena",
       "category": "ألعاب",
       "description": "فري فاير: عضويات أسبوعية وشهرية، تصريح بوياه، وجواهر — السعر عبر واتساب.",
@@ -153,7 +134,7 @@
       "oldPrice": 0,
       "duration": "شحنة واحدة",
       "badge": "الأكثر طلباً",
-      "color": "#FF6B35",
+      "color": "#ff6b35",
       "icon": "bolt",
       "features": [
         "عضويات أسبوعية",
@@ -167,7 +148,7 @@
       "image": "/uploads/free-fire.webp",
       "active": true,
       "createdAt": 1795249756103,
-      "updatedAt": 1795249756103
+      "updatedAt": 1795252079827
     },
     {
       "id": "399b5bdc-8d66-43f8-8ee9-1fe3d0ff94e3",
@@ -197,7 +178,7 @@
     },
     {
       "id": "24db93d5-fc93-464e-9631-f9ed07cf092c",
-      "name": "شحن شدات ببجي",
+      "name": "PUBG Mobile",
       "vendor": "PUBG Mobile",
       "category": "ألعاب",
       "description": "شحن شدات ببجي موبايل UC — كل الباقات متوفرة، السعر عبر واتساب.",
@@ -206,7 +187,7 @@
       "oldPrice": 0,
       "duration": "شحنة واحدة",
       "badge": "",
-      "color": "#F5B700",
+      "color": "#f5b700",
       "icon": "bolt",
       "features": [
         "شدات UC",
@@ -219,7 +200,7 @@
       "image": "/uploads/pubg.webp",
       "active": true,
       "createdAt": 1795249755511,
-      "updatedAt": 1795249755511
+      "updatedAt": 1795252091144
     },
     {
       "id": "641a4394-429c-49dd-9d4d-dddb2ab6d3cb",
@@ -249,7 +230,7 @@
     },
     {
       "id": "b9775a25-0884-48e4-93dd-a0f25d55c529",
-      "name": "شحن جواكر",
+      "name": "Jawaker",
       "vendor": "Jawaker",
       "category": "ألعاب",
       "description": "شحن جواكر — كل الباقات متوفرة، السعر عبر واتساب.",
@@ -258,7 +239,7 @@
       "oldPrice": 0,
       "duration": "شحنة واحدة",
       "badge": "",
-      "color": "#16A34A",
+      "color": "#16a34a",
       "icon": "bolt",
       "features": [
         "جميع الباقات",
@@ -271,7 +252,7 @@
       "image": "/uploads/jawaker.webp",
       "active": true,
       "createdAt": 1795249754323,
-      "updatedAt": 1795249754323
+      "updatedAt": 1795252111897
     },
     {
       "id": "2ef13f60-a024-44fc-9001-880f9ced3f31",
@@ -306,6 +287,7 @@
       "category": "محادثة",
       "description": "",
       "price": 5,
+      "priceOnRequest": false,
       "oldPrice": 0,
       "duration": "شهري",
       "badge": "",
@@ -315,10 +297,10 @@
       "stock": 10,
       "offer": false,
       "offerText": "",
-      "image": "/uploads/mwph350q-e57e2309690f.png",
+      "image": "/uploads/gemini.webp",
       "active": true,
       "createdAt": 1795209013310,
-      "updatedAt": 1795209013310
+      "updatedAt": 1795253970220
     },
     {
       "id": "1210dc4c-04bf-4210-8514-b373a1e31d9e",
@@ -398,6 +380,7 @@
       "category": "محادثة",
       "description": "مساعد كتابة وتحليل بسياق طويل جداً ودقة عالية في الملفات والأكواد.",
       "price": 13,
+      "priceOnRequest": false,
       "oldPrice": 0,
       "duration": "شهري",
       "badge": "مفضّل المحترفين",
@@ -412,10 +395,10 @@
       "stock": 8,
       "offer": false,
       "offerText": "",
-      "image": "/uploads/mwpgp9g8-11060685cdc8.png",
+      "image": "/uploads/claude.webp",
       "active": true,
       "createdAt": 1794942892340,
-      "updatedAt": 1795209698777
+      "updatedAt": 1795253970489
     },
     {
       "id": "26806103-981b-472c-9a8a-c01c2e06b2c2",

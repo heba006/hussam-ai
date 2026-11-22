@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hussam-Ai — تطبيقات وبرامج وشحن ألعاب</title>
-  <meta name="description" content="منصة Hussam-Ai لبيع التطبيقات والبرامج الأصلية وباقات شحن الألعاب بأسعار منافسة، مع طلب سريع عبر واتساب." />
-  <meta name="theme-color" content="#2563EB" />
+  <meta name="description" content="اكتشف اشتراكاتك الرقمية واختر الباقة المناسبة لك من Hussam-Ai. تفعيل سريع، أسعار مميزة، وضمان ذهبي." />
+  <meta name="theme-color" content="#01212E" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Hussam-Ai — تطبيقات وبرامج وشحن ألعاب" />
-  <meta property="og:description" content="اختر التطبيق أو البرنامج أو باقة الشحن التي تحتاجها، وأتمم طلبك عبر واتساب خلال دقائق." />
+  <meta property="og:description" content="كل اشتراكاتك الرقمية، في مكان واحد. اكتشف، اختر باقتك، ودع الباقي علينا." />
   <meta property="og:locale" content="ar_AR" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -83,39 +83,37 @@
   </svg>
 
   <div class="announcement" role="status">
-    <div class="announcement-track" id="announcementText">تسليم فوري خلال دقائق • دعم مباشر عبر واتساب • أسعار قابلة للتحديث</div>
+    <div class="announcement-track" id="announcementText">تفعيل سريع • أسعار مميزة • ضمان ذهبي</div>
   </div>
 
   <!-- ═══ الترويسة ═══ -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header storefront-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Hussam-Ai الصفحة الرئيسية">
         <span class="brand-text">
           <strong id="brandName">Hussam-Ai</strong>
-          <small>تطبيقات · برامج · شحن ألعاب</small>
+          <small>Digital Subscriptions Store</small>
         </span>
       </a>
 
       <nav class="main-nav" aria-label="التنقل الرئيسي">
-        <a href="#home">الرئيسية</a>
-        <a href="#apps">التطبيقات</a>
+        <a href="#apps">الاشتراكات</a>
         <a href="#programs">البرامج</a>
-        <a href="#games">الألعاب</a>
+        <a href="#games">شحن الألعاب</a>
         <a href="#offers">العروض</a>
-        <a href="#why">لماذا نحن</a>
-        <a href="#contact">تواصل</a>
+        <a href="#why">من نحن</a>
+        <a href="#contact">تواصل معنا</a>
       </nav>
 
       <div class="header-actions">
+        <span class="live-tag"><i class="live-dot"></i> عالمك الرقمي، أقرب</span>
         <button class="icon-btn" id="themeToggle" type="button" aria-label="تبديل المظهر">
           <svg class="icon icon-sun"><use href="#i-sun"/></svg>
           <svg class="icon icon-moon"><use href="#i-moon"/></svg>
         </button>
-
         <button class="icon-btn admin-trigger" id="adminTrigger" type="button" aria-label="لوحة التحكم" title="لوحة التحكم">
           <svg class="icon"><use href="#i-shield"/></svg>
         </button>
-
         <button class="cart-btn" id="cartTrigger" type="button" aria-label="سلة الاشتراكات">
           <svg class="icon"><use href="#i-cart"/></svg>
           <span class="cart-btn-label">السلة</span>
@@ -128,11 +126,15 @@
   <main>
     <!-- ═══ الواجهة الرئيسية ═══ -->
     <section class="hero" id="home">
-      <div class="aurora" aria-hidden="true">
-        <span class="aurora-blob a1"></span>
-        <span class="aurora-blob a2"></span>
-        <span class="aurora-blob a3"></span>
-        <span class="aurora-grid"></span>
+      <div class="energy-universe" aria-hidden="true">
+        <span class="fog f1"></span><span class="fog f2"></span>
+        <span class="side-ribbon sr1"></span><span class="side-ribbon sr2"></span>
+        <span class="side-orb so1"></span><span class="side-orb so2"></span>
+        <span class="noise-film"></span>
+        <span class="pr p1"></span><span class="pr p2"></span><span class="pr p3"></span>
+        <span class="pr p4"></span><span class="pr p5"></span><span class="pr p6"></span>
+        <span class="pr p7"></span><span class="pr p8"></span><span class="pr p9"></span>
+        <span class="pr p10"></span><span class="pr p11"></span><span class="pr p12"></span>
       </div>
 
       <div class="container hero-inner">
@@ -144,128 +146,105 @@
             <strong id="visitorCount">0</strong>
           </div>
 
-          <h1 class="reveal" id="heroTitle">كل التطبيقات والبرامج اللي تحتاجها… في مكان واحد</h1>
-          <p class="hero-text reveal" id="heroText">
-            اختر التطبيق الذي يناسبك، أضفه إلى السلة، وأتمم اشتراكك عبر واتساب خلال دقائق.
-            أسعار منافسة، بدون وسطاء، ودعم بشري في كل خطوة.
+          <h1 class="hero-title reveal">
+            <span id="heroTitle">عالمك الرقمي. ببُعد جديد.</span>
+            <em class="hero-gold">تفعيل سريع . أسعار مميزة . وضمان ذهبي</em>
+          </h1>
+          <p class="hero-text reveal">
+            <span id="heroText">كل اشتراكاتك الرقمية، في مكان واحد.</span>
+            <span class="hero-sub">اكتشف، اختر باقتك، ودع الباقي علينا.</span>
           </p>
 
           <div class="hero-cta reveal">
             <a class="btn btn-primary btn-lg" href="#apps">
-              <svg class="icon"><use href="#i-sparkles"/></svg>
-              تصفّح التطبيقات
+              اكتشف الاشتراكات
+              <svg class="icon"><use href="#i-arrow"/></svg>
             </a>
             <a class="btn btn-accent btn-lg" href="#" data-whatsapp-link target="_blank" rel="noopener">
               <svg class="icon"><use href="#i-whatsapp"/></svg>
-              اطلب عبر واتساب
+              تواصل عبر واتساب
             </a>
           </div>
 
           <ul class="trust-list reveal">
-            <li><svg class="icon"><use href="#i-bolt"/></svg> تسليم خلال دقائق</li>
-            <li><svg class="icon"><use href="#i-shield"/></svg> اشتراكات أصلية</li>
-            <li><svg class="icon"><use href="#i-headset"/></svg> دعم بشري مباشر</li>
+            <li><svg class="icon"><use href="#i-shield"/></svg> طلب مباشر وآمن</li>
+            <li><svg class="icon"><use href="#i-box"/></svg> باقات تناسب احتياجك</li>
+            <li><svg class="icon"><use href="#i-bolt"/></svg> تفعيل خلال دقائق</li>
           </ul>
         </div>
 
         <div class="hero-visual reveal" aria-hidden="true">
-          <div class="hero-scene">
-            <div class="scene-aurora"></div>
+          <div class="hero-art">
+            <span class="art-ring ring-a"></span>
+            <span class="art-ring ring-b"></span>
+            <span class="art-ring ring-c"></span>
+            <span class="art-orbit orbit1"></span>
+            <span class="art-orbit orbit2"></span>
+            <span class="art-floor"></span>
 
-            <div class="phone">
-              <div class="phone-notch"></div>
-
-              <div class="phone-head">
-                <svg viewBox="0 0 48 48"><use href="#logo-mark"/></svg>
-                <div>
-                  <strong>Hussam-Ai</strong>
-                  <span><i class="live-dot"></i> متصل الآن</span>
-                </div>
-                <svg class="icon wa-mini"><use href="#i-whatsapp"/></svg>
-              </div>
-
-              <div class="phone-body">
-                <span class="chat-day">اليوم</span>
-
-                <div class="bubble bubble-in">
-                  مرحباً، أرغب بالاستفسار عن السعر
-                  <span class="bubble-time">10:24</span>
-                </div>
-
-                <div class="bubble bubble-product">
-                  <img src="/uploads/gemini.webp" alt="" />
-                  <div><strong>Gemini Pro</strong><small>السعر عبر واتساب</small></div>
-                  <span class="bubble-time">10:25</span>
-                </div>
-
-                <div class="bubble bubble-out">
-                  تم تأكيد طلبك ✅<br />سيتم التسليم خلال دقائق
-                  <span class="bubble-time">10:26 ✓✓</span>
-                </div>
-
-                <div class="typing-row"><span class="typing"><i></i><i></i><i></i></span></div>
-              </div>
-
-              <div class="phone-bar">
-                <span>اكتب رسالة…</span>
-                <span class="send"><svg class="icon"><use href="#i-bolt"/></svg></span>
-              </div>
+            <div class="art-center">
+              <svg class="icon"><use href="#i-sparkles"/></svg>
             </div>
 
-            <div class="scene-badge badge-one"><svg class="icon"><use href="#i-bolt"/></svg> تسليم فوري</div>
-            <div class="scene-badge badge-two"><svg class="icon"><use href="#i-shield"/></svg> اشتراكات أصلية</div>
+            <span class="art-caption">HUSSAM DIGITAL UNIVERSE</span>
+
+            <div class="art-card art-card-a"><svg class="icon"><use href="#i-wand"/></svg> أفكار بلا حدود</div>
+            <div class="art-card art-card-b"><svg class="icon"><use href="#i-pen"/></svg> صناعة المحتوى</div>
+            <div class="art-card art-card-c"><svg class="icon"><use href="#i-layers"/></svg></div>
+            <p class="art-note"> كل ما يلهمك. في مكان واحد.</p>
+
+            <span class="art-star star-a">✦</span>
+            <span class="art-star star-b">✦</span>
+            <span class="art-star star-c">✦</span>
           </div>
         </div>
       </div>
 
       <div class="container">
         <div class="hero-stats reveal">
-          <div class="hero-stat">
-            <strong id="statApps">0</strong>
-            <span>تطبيق متاح</span>
-          </div>
-          <div class="hero-stat">
-            <strong id="statVisitors">0</strong>
-            <span>زائر للمنصة</span>
-          </div>
-          <div class="hero-stat">
-            <strong>5</strong>
-            <span>دقائق للتسليم</span>
-          </div>
-          <div class="hero-stat">
-            <strong>24/7</strong>
-            <span>دعم متواصل</span>
-          </div>
+          <div class="hero-stat"><strong id="statApps">0</strong><span>تطبيق متاح</span></div>
+          <div class="hero-stat"><strong id="statVisitors">0</strong><span>زائر للمنصة</span></div>
+          <div class="hero-stat"><strong>4 سنوات</strong><span>الخبرة</span></div>
+          <div class="hero-stat"><strong>20,000+</strong><span>عميل سعيد</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ شريط الأدوات ═══ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>شاهد VIP</span><i>✦</i><span>Gemini Pro</span><i>✦</i><span>Claude Pro</span><i>✦</i>
-        <span>Canva Pro</span><i>✦</i><span>CapCut Pro</span><i>✦</i><span>شحن ببجي</span><i>✦</i>
-        <span>شاهد VIP</span><i>✦</i><span>Gemini Pro</span><i>✦</i><span>Claude Pro</span><i>✦</i>
-        <span>Canva Pro</span><i>✦</i><span>CapCut Pro</span><i>✦</i><span>شحن ببجي</span><i>✦</i>
+    <!-- ═══ شريط الكلمات ═══ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="container ticker-inner">
+        <span>إبداع أكثر</span><i>✦</i>
+        <span>إنتاجية أعلى</span><i>✦</i>
+        <span>خيارات أوسع</span><i>✦</i>
+        <span>تجربة أبسط</span>
       </div>
     </div>
 
-    <!-- ═══ التطبيقات ═══ -->
-    <section class="section" id="apps">
+    <!-- ═══ الكتالوج / التطبيقات ═══ -->
+    <section class="section catalog" id="apps">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow"><svg class="icon"><use href="#i-layers"/></svg> متجر الاشتراكات</span>
-          <h2>التطبيقات والاشتراكات</h2>
-          <p>أسعار واضحة ومحدّثة، وأضف ما تحتاجه إلى السلة ثم أتمم الطلب عبر واتساب.</p>
+          <span class="eyebrow">اختياراتك تبدأ هنا</span>
+          <h2>اكتشف الاشتراكات <span class="catalog-total" id="catalogTotal">(0)</span></h2>
+          <p>أدوات تحبها. وباقات تناسبك.</p>
         </div>
 
-        <div class="apps-toolbar reveal">
-          <label class="search-box">
+        <div class="catalog-toolbar reveal">
+          <label class="search-box catalog-search">
             <svg class="icon"><use href="#i-search"/></svg>
-            <input type="search" id="searchInput" placeholder="ابحث عن تطبيق…" aria-label="ابحث عن تطبيق" autocomplete="off" />
+            <input type="search" id="searchInput" placeholder="ما الاشتراك الذي تبحث عنه؟" aria-label="ابحث عن اشتراك" autocomplete="off" />
+            <span class="search-hint">بحث سريع</span>
           </label>
           <div class="chips" id="categoryChips" role="group" aria-label="تصفية حسب الفئة"></div>
-          <span class="apps-count" id="appsCount">—</span>
+          <label class="available-only">
+            <input type="checkbox" id="availableOnly" />
+            <span>المتوفر فقط</span>
+          </label>
+        </div>
+
+        <div class="results-bar">
+          <span id="appsCount">—</span>
+          <span class="results-note"><svg class="icon"><use href="#i-layers"/></svg> مختارة لك بعناية</span>
         </div>
 
         <div class="apps-grid" id="appsGrid" aria-live="polite"></div>
@@ -276,6 +255,16 @@
           <p>جرّب كلمة بحث أخرى أو اختر فئة مختلفة.</p>
           <button class="btn btn-ghost" type="button" id="resetFilters">إعادة ضبط البحث</button>
         </div>
+
+        <div class="help-cta reveal">
+          <div>
+            <h3>اختيارك يحتاج مساعدة؟</h3>
+            <p>نساعدك في الوصول للاشتراك الأنسب لاحتياجك.</p>
+          </div>
+          <a class="btn btn-primary" href="#" data-whatsapp-link target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-whatsapp"/></svg> تواصل معنا
+          </a>
+        </div>
       </div>
     </section>
 
@@ -283,13 +272,11 @@
     <section class="section programs" id="programs">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow accent"><svg class="icon"><use href="#i-layers"/></svg> قسم البرامج</span>
+          <span class="eyebrow">قسم البرامج</span>
           <h2>البرامج وأدوات العمل</h2>
           <p>برامج التصميم والمونتاج والإنتاجية — اختر البرنامج المناسب وأكمل الطلب عبر واتساب.</p>
         </div>
-
         <div class="apps-grid" id="programsGrid" aria-live="polite"></div>
-
         <div class="empty-state" id="programsEmpty" hidden>
           <span class="empty-icon"><svg class="icon"><use href="#i-layers"/></svg></span>
           <h3>لا توجد برامج حالياً</h3>
@@ -302,13 +289,11 @@
     <section class="section games" id="games">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow accent"><svg class="icon"><use href="#i-bolt"/></svg> قسم الألعاب</span>
+          <span class="eyebrow">قسم الألعاب</span>
           <h2>تطبيقات شحن الألعاب</h2>
           <p>يالا لودو، جواكر، نجوم تليجرام، شدات ببجي، عملات تيك توك، فري فاير، بلياردو وأكثر — السعر عبر واتساب.</p>
         </div>
-
         <div class="apps-grid" id="gamesGrid" aria-live="polite"></div>
-
         <div class="empty-state" id="gamesEmpty" hidden>
           <span class="empty-icon"><svg class="icon"><use href="#i-bolt"/></svg></span>
           <h3>لا توجد باقات ألعاب حالياً</h3>
@@ -322,13 +307,11 @@
       <div class="offers-glow" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow accent"><svg class="icon"><use href="#i-wand"/></svg> عروض محدودة</span>
+          <span class="eyebrow">عروض محدودة</span>
           <h2>عروض توفّر عليك أكثر</h2>
           <p>باقات وخصومات مختارة بعناية، والكميات محدودة — اطلب عرضك قبل انتهائه.</p>
         </div>
-
         <div class="offers-grid" id="offersGrid" aria-live="polite"></div>
-
         <div class="offers-empty" id="offersEmpty" hidden>
           <svg class="icon"><use href="#i-wand"/></svg>
           <p>لا توجد عروض نشطة حالياً — تابعنا قريباً لعروض جديدة.</p>
@@ -336,36 +319,108 @@
       </div>
     </section>
 
-    <!-- ═══ لماذا نحن ═══ -->
-    <section class="section why" id="why">
+    <!-- ═══ من نحن / معلومات المتجر ═══ -->
+    <section class="section store-information" id="why">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow"><svg class="icon"><use href="#i-shield"/></svg> لماذا Hussam-Ai</span>
-          <h2>تجربة اشتراك تستحق ثقتك</h2>
-          <p>نهتم بالتفاصيل من لحظة الطلب حتى ما بعد التسليم.</p>
+          <span class="eyebrow">من نحن</span>
+          <h2>متجرك الموثوق للاشتراكات الرقمية</h2>
+          <p>متجرك الموثوق للاشتراكات الرقمية بأفضل الأسعار، مع ضمان ذهبي، تفعيل سريع، ودعم فني مميز لضمان تجربة شراء آمنة وسهلة.</p>
         </div>
 
-        <div class="why-grid">
-          <article class="why-card reveal">
+        <div class="why-grid reveal">
+          <article class="why-card">
             <span class="why-icon"><svg class="icon"><use href="#i-bolt"/></svg></span>
-            <h3>تسليم فوري</h3>
+            <h3>تفعيل سريع</h3>
             <p>يتم تجهيز اشتراكك وإرساله عبر واتساب خلال دقائق من تأكيد الطلب.</p>
           </article>
-          <article class="why-card reveal">
+          <article class="why-card">
             <span class="why-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
-            <h3>اشتراكات أصلية</h3>
-            <p>مصادر موثوقة وضمان طوال مدة الاشتراك، بدون مفاجآت.</p>
+            <h3>ضمان ذهبي</h3>
+            <p>ضمان على جميع الاشتراكات المتوفرة داخل متجرنا، لتجربة شراء آمنة وموثوقة.</p>
           </article>
-          <article class="why-card reveal">
+          <article class="why-card">
             <span class="why-icon"><svg class="icon"><use href="#i-wallet"/></svg></span>
-            <h3>أسعار منافسة</h3>
+            <h3>أسعار مميزة</h3>
             <p>نحدّث الأسعار باستمرار لنمنحك أفضل قيمة مقابل ما تدفعه.</p>
           </article>
-          <article class="why-card reveal">
+          <article class="why-card">
             <span class="why-icon"><svg class="icon"><use href="#i-headset"/></svg></span>
-            <h3>دعم شخصي</h3>
-            <p>تتواصل مباشرة معي عبر واتساب قبل الطلب وبعده، بدون روبوتات.</p>
+            <h3>دعم مباشر</h3>
+            <p>تتواصل معي مباشرة عبر واتساب قبل الطلب وبعده، بدون روبوتات.</p>
           </article>
+        </div>
+
+        <div class="info-accordions reveal">
+          <details class="info-item" open>
+            <summary>من نحن <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p>تصفح الاشتراكات والباقات المتاحة، واختر ما يناسب احتياجك، ثم تواصل معنا عبر واتساب لإكمال الطلب.</p>
+              <div class="info-mini-stats">
+                <div><strong>4 سنوات</strong><span>الخبرة</span></div>
+                <div><strong>أكثر من 20,000 عميل</strong><span>العملاء</span></div>
+              </div>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>الشروط والأحكام <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p><b>1. الشراء والاستخدام</b><br />يُستخدم الاشتراك لأغراض شخصية، ويُمنع مشاركته أو إعادة بيعه.</p>
+              <p><b>2. الضمان والاستبدال</b><br />نضمن عمل الاشتراك طوال المدة المتفق عليها.</p>
+              <p><b>3. إلغاء الضمان</b><br />يُلغى الضمان عند تغيير بيانات الحساب أو سوء الاستخدام.</p>
+              <p><b>4. الموافقة على الشروط</b><br />بإتمام الطلب أنت موافق على هذه الشروط.</p>
+              <p class="info-updated">نسعى دائمًا إلى تقديم خدمات موثوقة وضمان أفضل تجربة لعملائنا.</p>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>سياسة الخصوصية <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p><b>1. جمع المعلومات</b><br />نجمع فقط البيانات اللازمة لتنفيذ طلبك.</p>
+              <p><b>2. حماية البيانات</b><br />لا تُشارك بياناتك مع أي طرف ثالث.</p>
+              <p><b>3. استخدام المعلومات</b><br />تُستخدم بياناتك للتواصل وتسليم الاشتراك فقط.</p>
+              <p><b>4. حقوق العملاء</b><br />يمكنك طلب حذف بياناتك في أي وقت.</p>
+              <p class="info-updated">خصوصيتك وأمان معلوماتك من أولوياتنا.</p>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>سياسة الضمان <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p>نقدم ضمانًا ذهبيًا على جميع الاشتراكات المتوفرة داخل متجرنا، لضمان تجربة شراء آمنة وموثوقة.</p>
+              <p class="info-updated">آخر تحديث: 2026-11-16</p>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>الاسترجاع والاستبدال <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p>لا يمكن استرجاع المبلغ بعد تسليم الاشتراك أو تفعيله، إلا في الحالات التي تستوجب ذلك وفق الأنظمة المعمول بها.</p>
+              <p class="info-updated">آخر تحديث: 2026-11-16</p>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>سياسة التفعيل والتسليم <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p>يتم تسليم الطلبات وتفعيل الاشتراكات خلال مدة تتراوح من 15 إلى 45 دقيقة.</p>
+              <p class="info-updated">آخر تحديث: 2026-11-16</p>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>الأسئلة الشائعة <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p><b>كيف يتم التفعيل؟</b><br />يتم تفعيل الاشتراك على حسابك الشخصي أو تسليم حساب جاهز، حسب نوع الاشتراك وطريقة التفعيل الموضحة في وصف المنتج.</p>
+              <p><b>كم يستغرق التفعيل؟</b><br />تتراوح مدة التفعيل والتسليم من 15 إلى 45 دقيقة، حسب نوع الاشتراك والضغط على النظام.</p>
+              <p><b>هل يوجد ضمان؟</b><br />نعم، ضمان ذهبي على جميع الاشتراكات.</p>
+              <p><b>كيف أطلب الاشتراك؟</b><br />اختر الاشتراك ثم تواصل معنا عبر واتساب.</p>
+              <p><b>ما هي طرق الدفع؟</b><br />1. كليك (CliQ) 2. المحافظ الإلكترونية 3. العملات الرقمية (Crypto)</p>
+            </div>
+          </details>
+          <details class="info-item">
+            <summary>تواصل معنا <svg class="icon"><use href="#i-plus"/></svg></summary>
+            <div class="info-body">
+              <p>يسعدنا مساعدتك في اختيار الاشتراك المناسب.</p>
+              <p>واتساب: <span id="infoWhatsapp">+962770403484</span></p>
+              <p>يوميًا من 12:00 صباحًا حتى 12:00 مساءً.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -376,16 +431,14 @@
         <div class="cta-band reveal">
           <div class="cta-glow" aria-hidden="true"></div>
           <div class="cta-content">
-            <h2>جاهز تبدأ؟ راسلني الآن على واتساب</h2>
-            <p>أخبرني بالتطبيق الذي تريده، وسأرد عليك بالتفاصيل وطريقة التسليم خلال دقائق.</p>
+            <h2>تواصل معنا</h2>
+            <p>يسعدنا مساعدتك في اختيار الاشتراك المناسب. راسلنا الآن على واتساب وسنرد عليك بالتفاصيل خلال دقائق.</p>
             <div class="cta-actions">
               <a class="btn btn-whatsapp btn-lg" href="#" data-whatsapp-link target="_blank" rel="noopener">
-                <svg class="icon"><use href="#i-whatsapp"/></svg>
-                محادثة واتساب
+                <svg class="icon"><use href="#i-whatsapp"/></svg> تواصل عبر واتساب
               </a>
               <a class="btn btn-glass btn-lg" href="#apps">
-                <svg class="icon"><use href="#i-cart"/></svg>
-                تصفّح الاشتراكات
+                <svg class="icon"><use href="#i-box"/></svg> تصفّح الاشتراكات
               </a>
             </div>
           </div>
@@ -401,33 +454,46 @@
   </main>
 
   <!-- ═══ التذييل ═══ -->
-  <footer class="site-footer">
+  <footer class="site-footer store-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="brand" href="/">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><use href="#logo-mark"/></svg>
-          </span>
-          <span class="brand-text"><strong id="footerBrand">Hussam-Ai</strong><small>تطبيقات · برامج · شحن ألعاب</small></span>
+          <span class="brand-text"><strong id="footerBrand">Hussam-Ai</strong><small>Digital Subscriptions Store</small></span>
         </a>
-        <p>منصة شخصية لعرض وبيع التطبيقات والبرامج وباقات الشحن، بأسعار واضحة وتواصل مباشر عبر واتساب.</p>
+        <p>مساحتك للاشتراكات الرقمية. اكتشف الخيارات واختر الباقة المناسبة لك.</p>
+        <a class="btn btn-whatsapp" href="#" data-whatsapp-link target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-whatsapp"/></svg> تواصل عبر واتساب
+        </a>
       </div>
 
       <nav class="footer-links" aria-label="روابط التذييل">
         <h3>روابط سريعة</h3>
-        <a href="#apps">التطبيقات</a>
+        <a href="#home">الرئيسية</a>
+        <a href="#apps">جميع الاشتراكات</a>
+        <a href="#why">من نحن</a>
         <a href="#programs">البرامج</a>
-        <a href="#games">الألعاب</a>
-        <a href="#why">لماذا نحن</a>
+        <a href="#games">شحن الألعاب</a>
+        <a href="#offers">العروض</a>
+        <a href="#contact">تواصل معنا</a>
       </nav>
 
+      <div class="footer-links" aria-label="السياسات والمعلومات">
+        <h3>السياسات والمعلومات</h3>
+        <a href="#why">الشروط والأحكام</a>
+        <a href="#why">سياسة الخصوصية</a>
+        <a href="#why">سياسة الضمان</a>
+        <a href="#why">الاسترجاع والاستبدال</a>
+        <a href="#why">سياسة التفعيل والتسليم</a>
+        <a href="#why">الأسئلة الشائعة</a>
+      </div>
+
       <div class="footer-contact">
-        <h3>تواصل</h3>
+        <h3>تواصل معنا</h3>
         <a href="#" data-whatsapp-link target="_blank" rel="noopener" class="footer-wa">
           <svg class="icon"><use href="#i-whatsapp"/></svg>
-          <span id="footerWhatsapp">واتساب</span>
+          <span id="footerWhatsapp">+962770403484</span>
         </a>
-        <p class="footer-note">الأسعار قابلة للتغيير، ويتم تأكيد التوفر قبل التسليم.</p>
+        <p class="footer-note">يوميًا من 12:00 صباحًا حتى 12:00 مساءً.</p>
         <button class="footer-admin" type="button" id="adminTriggerFooter">
           <svg class="icon"><use href="#i-lock"/></svg> لوحة التحكم
         </button>
@@ -438,8 +504,8 @@
     </div>
 
     <div class="container footer-bottom">
-      <span>© <span id="year">2026</span> Hussam-Ai — جميع الحقوق محفوظة.</span>
-      <span class="footer-badge"><span class="live-dot"></span> المنصة تعمل الآن</span>
+      <span>© <span id="year">2026</span> Hussam-Ai — جميع الحقوق محفوظة</span>
+      <button class="back-to-top" type="button" id="backToTop">الرجوع للأعلى ↑</button>
     </div>
   </footer>
 

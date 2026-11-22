@@ -210,9 +210,9 @@
     const announcement = $('#announcementText');
     if (announcement && s.announcement) announcement.textContent = s.announcement;
 
-    $('#footerWhatsapp').textContent = s.whatsapp
-      ? `+${s.whatsapp}`
-      : 'تواصل عبر واتساب';
+    const whatsappLabel = s.whatsapp ? `+${s.whatsapp}` : 'تواصل عبر واتساب';
+    $('#footerWhatsapp').textContent = whatsappLabel;
+    $('#infoWhatsapp').textContent = whatsappLabel;
 
     const message = `مرحباً ${s.siteName || 'Hussam-Ai'} 👋\nأرغب بالاستفسار عن التطبيقات والبرامج وباقات الشحن.`;
     $$('[data-whatsapp-link]').forEach((link) => { link.href = waLink(message); });
@@ -292,6 +292,7 @@
             ? true
             : app.category === state.filter;
       if (!matchCategory) return false;
+      if ($('#availableOnly')?.checked && stockOf(app) <= 0) return false;
       if (!query) return true;
       return [app.name, app.vendor, app.description, app.category, app.offerText]
         .filter(Boolean)
@@ -451,6 +452,8 @@
     if (empty) empty.hidden = apps.length > 0;
 
     const total = state.apps.filter((app) => app.category !== GAMES_CATEGORY && app.category !== PROGRAMS_CATEGORY).length;
+    const catalogTotal = $('#catalogTotal');
+    if (catalogTotal) catalogTotal.textContent = `(${nf.format(total)})`;
     if (count) {
       count.textContent = apps.length === total
         ? `${nf.format(apps.length)} تطبيقات متاحة`
@@ -1657,6 +1660,12 @@
       state.filter = chip.dataset.cat;
       renderChips();
       renderApps();
+    });
+
+    $('#availableOnly')?.addEventListener('change', renderApps);
+
+    $('#backToTop')?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     $('#resetFilters')?.addEventListener('click', () => {
